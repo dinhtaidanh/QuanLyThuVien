@@ -8,8 +8,8 @@
     <ProjectGuid>{11F8CB90-DD3F-4C5D-B489-5495531632E7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuanLyThuVien</RootNamespace>
-    <AssemblyName>QuanLyThuVien</AssemblyName>
+    <RootNamespace>ManHinhChinh</RootNamespace>
+    <AssemblyName>ManHinhChinh</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -46,14 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ManHinhChinh.Designer.cs">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLySach.Designer.cs">
+      <DependentUpon>QuanLySach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThueSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThueSach.Designer.cs">
+      <DependentUpon>QuanLyThueSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuSach.Designer.cs">
+      <DependentUpon>TraCuuSach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ManHinhChinh.resx">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +90,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLySach.resx">
+      <DependentUpon>QuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThueSach.resx">
+      <DependentUpon>QuanLyThueSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuSach.resx">
+      <DependentUpon>TraCuuSach.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

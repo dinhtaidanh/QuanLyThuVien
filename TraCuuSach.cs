@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QuanLyThuVien
+namespace ManHinhChinh
 {
-    public partial class Form1 : Form
+    public partial class TraCuuSach : Form
     {
-        public Form1()
+        public TraCuuSach()
         {
             InitializeComponent();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
