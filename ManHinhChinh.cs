@@ -14,6 +14,8 @@ namespace ManHinhChinh
         public ManHinhChinh()
         {
             InitializeComponent();
+            lvwDanhSach.MultiSelect = false;
+            List<Sach> lstSach = new List<Sach>();
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\ThuVien.mdb";
             string queryString = "SELECT * FROM Sach";
             OleDbConnection connection = new OleDbConnection(connectionString) ;   //tạo lớp kết nối vào .mbd
@@ -29,11 +31,18 @@ namespace ManHinhChinh
                         Sach sach = new Sach();
                         sach.MaSach=Convert.ToInt32(reader[0]);
                         sach.TenSach = reader[1].ToString();
+                        sach.TheLoai = reader[2].ToString();
+                        sach.TacGia = reader[3].ToString();
+                        sach.NhaXuatBan = reader[4].ToString();
                         sach.SoLuong = Convert.ToInt32(reader[5]);
+                        lstSach.Add(sach);
+
                         ListViewItem item = new ListViewItem();
                         item.SubItems.Add(sach.MaSach.ToString());
                         item.SubItems.Add(sach.TenSach);
                         item.SubItems.Add(sach.SoLuong.ToString());
+                        item.SubItems.Add(sach.TacGia.ToString());
+                        item.SubItems.Add(sach.TheLoai.ToString());
                         lvwDanhSach.Items.Add(item);
                     }
                     reader.Close();
@@ -103,5 +112,20 @@ namespace ManHinhChinh
             QuanLyKhachHang f = new QuanLyKhachHang();
             f.ShowDialog();
         }
+
+        private void lvwDanhSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection collection = lvwDanhSach.SelectedItems;
+            foreach (ListViewItem item in collection)
+            {
+                txtMaSach.Text = item.SubItems[1].Text;
+                txtTenSach.Text = item.SubItems[2].Text;
+                txtSoLuong.Text = item.SubItems[3].Text;
+                txtTacGia.Text = item.SubItems[4].Text;
+                txtTheLoai.Text = item.SubItems[5].Text;
+            }
+
+        }
+
     }
 }

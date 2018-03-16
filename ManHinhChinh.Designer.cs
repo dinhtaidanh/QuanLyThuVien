@@ -32,11 +32,9 @@
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
-            this.txtMaLoai = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.quanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,11 +51,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lvwDanhSach = new System.Windows.Forms.ListView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaSach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TenSach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTheLoai = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -67,7 +67,7 @@
             // txtTacGia
             // 
             this.txtTacGia.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTacGia.Location = new System.Drawing.Point(124, 174);
+            this.txtTacGia.Location = new System.Drawing.Point(124, 184);
             this.txtTacGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.ReadOnly = true;
@@ -77,7 +77,7 @@
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(124, 137);
+            this.txtSoLuong.Location = new System.Drawing.Point(124, 147);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.ReadOnly = true;
@@ -86,22 +86,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtTheLoai);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtTenSach);
-            this.groupBox2.Controls.Add(this.txtMaLoai);
             this.groupBox2.Controls.Add(this.txtTacGia);
             this.groupBox2.Controls.Add(this.txtSoLuong);
             this.groupBox2.Controls.Add(this.txtMaSach);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 141);
+            this.groupBox2.Location = new System.Drawing.Point(11, 116);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(546, 213);
+            this.groupBox2.Size = new System.Drawing.Size(546, 239);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Chi  Tiết";
@@ -115,16 +115,6 @@
             this.txtTenSach.ReadOnly = true;
             this.txtTenSach.Size = new System.Drawing.Size(210, 29);
             this.txtTenSach.TabIndex = 1;
-            // 
-            // txtMaLoai
-            // 
-            this.txtMaLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLoai.Location = new System.Drawing.Point(124, 101);
-            this.txtMaLoai.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaLoai.Name = "txtMaLoai";
-            this.txtMaLoai.ReadOnly = true;
-            this.txtMaLoai.Size = new System.Drawing.Size(210, 29);
-            this.txtMaLoai.TabIndex = 1;
             // 
             // txtMaSach
             // 
@@ -140,7 +130,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 183);
+            this.label6.Location = new System.Drawing.Point(23, 189);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 19);
@@ -151,23 +141,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 146);
+            this.label5.Location = new System.Drawing.Point(6, 152);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 19);
             this.label5.TabIndex = 0;
             this.label5.Text = "Số Lượng:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 110);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Mã Loại Sách:";
             // 
             // label3
             // 
@@ -354,6 +333,26 @@
             this.lvwDanhSach.TabIndex = 0;
             this.lvwDanhSach.UseCompatibleStateImageBehavior = false;
             this.lvwDanhSach.View = System.Windows.Forms.View.Details;
+            this.lvwDanhSach.SelectedIndexChanged += new System.EventHandler(this.lvwDanhSach_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Width = 0;
+            // 
+            // MaSach
+            // 
+            this.MaSach.Text = "Mã sách";
+            this.MaSach.Width = 120;
+            // 
+            // TenSach
+            // 
+            this.TenSach.Text = "Tên sách";
+            this.TenSach.Width = 200;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.Text = "Số lượng";
+            this.SoLuong.Width = 120;
             // 
             // groupBox3
             // 
@@ -368,27 +367,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách";
             // 
-            // columnHeader1
+            // txtTheLoai
             // 
-            this.columnHeader1.Width = 0;
+            this.txtTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTheLoai.Location = new System.Drawing.Point(124, 109);
+            this.txtTheLoai.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTheLoai.Name = "txtTheLoai";
+            this.txtTheLoai.ReadOnly = true;
+            this.txtTheLoai.Size = new System.Drawing.Size(210, 29);
+            this.txtTheLoai.TabIndex = 3;
             // 
-            // MaSach
+            // label4
             // 
-            this.MaSach.Text = "Mã sách";
-            this.MaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaSach.Width = 120;
-            // 
-            // TenSach
-            // 
-            this.TenSach.Text = "Tên sách";
-            this.TenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TenSach.Width = 200;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.Text = "Số lượng";
-            this.SoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SoLuong.Width = 120;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 114);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Thể Loại:";
             // 
             // ManHinhChinh
             // 
@@ -439,14 +437,14 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TextBox txtMaLoai;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView lvwDanhSach;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader MaSach;
         private System.Windows.Forms.ColumnHeader TenSach;
         private System.Windows.Forms.ColumnHeader SoLuong;
+        private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.Label label4;
     }
 }
 
