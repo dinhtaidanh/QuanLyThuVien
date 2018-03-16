@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManHinhChinh.Model;
+using ManHinhChinh.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +13,34 @@ namespace ManHinhChinh
 {
     public partial class QuanLyKhachHang : Form
     {
+        KhachHangService khachHangService;
         public QuanLyKhachHang()
         {
             InitializeComponent();
+            khachHangService = new KhachHangService();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void QuanLyKhachHang_Load(object sender, EventArgs e)
+        {
+            List<KhachHang> lst=khachHangService.GetKhachHang();
+            foreach(KhachHang k in lst)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Add(k.MaKhachHang.ToString());
+                item.SubItems.Add(k.Ho);
+                item.SubItems.Add(k.Ten);
+                item.SubItems.Add(k.Email);
+                item.SubItems.Add(k.DiaChi);
+                item.SubItems.Add(k.SoDienThoai);
+                lvwDanhSachKH.Items.Add(item);
+            }
+            KhachHang khachHang = new KhachHang() { MaKhachHang="1", Ho="abc", Ten="abc", DiaChi="abc", Email="abc", SoDienThoai= "abc" };
+            khachHangService.InsertKhachHang(khachHang);
         }
     }
 }

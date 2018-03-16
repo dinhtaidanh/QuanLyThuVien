@@ -7,52 +7,49 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using ManHinhChinh.Model;
 namespace ManHinhChinh
 {
     public partial class ManHinhChinh : Form
     {
+        Connection cn;
         public ManHinhChinh()
         {
             InitializeComponent();
             lvwDanhSach.MultiSelect = false;
-            List<Sach> lstSach = new List<Sach>();
-            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\ThuVien.mdb";
+            cn = new Connection();
             string queryString = "SELECT * FROM Sach";
-            OleDbConnection connection = new OleDbConnection(connectionString) ;   //tạo lớp kết nối vào .mbd
-            using (OleDbCommand command = new OleDbCommand(queryString, connection))    //tạo lớp lệnh sql sử dụng lớp kết nối trên
+            try
             {
-                try
+                OleDbCommand command= cn.GetDbCommand(queryString);
+                OleDbDataReader reader = command.ExecuteReader();  //thực thi sql và trả về kết quả
+                List<Sach> lstSach = new List<Sach>();
+                while (reader.Read())  //đọc kết quả
                 {
-                    connection.Open();  //bắt đầu kết nối
-                    OleDbDataReader reader = command.ExecuteReader();  //thực thi sql và trả về kết quả
+                    Sach sach = new Sach();
+                    sach.MaSach = Convert.ToInt32(reader[0]);
+                    sach.TenSach = reader[1].ToString();
+                    sach.TheLoai = reader[2].ToString();
+                    sach.TacGia = reader[3].ToString();
+                    sach.NhaXuatBan = reader[4].ToString();
+                    sach.SoLuong = Convert.ToInt32(reader[5]);
+                    lstSach.Add(sach);
 
-                    while (reader.Read())  //đọc kết quả
-                    {
-                        Sach sach = new Sach();
-                        sach.MaSach=Convert.ToInt32(reader[0]);
-                        sach.TenSach = reader[1].ToString();
-                        sach.TheLoai = reader[2].ToString();
-                        sach.TacGia = reader[3].ToString();
-                        sach.NhaXuatBan = reader[4].ToString();
-                        sach.SoLuong = Convert.ToInt32(reader[5]);
-                        lstSach.Add(sach);
-
-                        ListViewItem item = new ListViewItem();
-                        item.SubItems.Add(sach.MaSach.ToString());
-                        item.SubItems.Add(sach.TenSach);
-                        item.SubItems.Add(sach.SoLuong.ToString());
-                        item.SubItems.Add(sach.TacGia.ToString());
-                        item.SubItems.Add(sach.TheLoai.ToString());
-                        lvwDanhSach.Items.Add(item);
-                    }
-                    reader.Close();
-                   
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Add(sach.MaSach.ToString());
+                    item.SubItems.Add(sach.TenSach);
+                    item.SubItems.Add(sach.SoLuong.ToString());
+                    item.SubItems.Add(sach.TacGia.ToString());
+                    item.SubItems.Add(sach.TheLoai.ToString());
+                    lvwDanhSach.Items.Add(item);
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                reader.Close();
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
         private void btnQuanLiKH_Click(object sender, EventArgs e)
@@ -127,5 +124,9 @@ namespace ManHinhChinh
 
         }
 
+        private void ManHinhChinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
