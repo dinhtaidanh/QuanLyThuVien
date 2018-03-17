@@ -41,5 +41,11 @@ namespace ManHinhChinh
             }
            
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            QuanLyKH_ThemKH f = new QuanLyKH_ThemKH();
+            f.ShowDialog();
+        }
     }
 }
