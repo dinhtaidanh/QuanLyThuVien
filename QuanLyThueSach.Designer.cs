@@ -215,9 +215,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader12,
-            this.columnHeader13});
+            this.columnHeader5});
             this.lvwDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwDanhSach.FullRowSelect = true;
             this.lvwDanhSach.GridLines = true;

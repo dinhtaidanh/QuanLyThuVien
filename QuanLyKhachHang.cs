@@ -79,5 +79,29 @@ namespace ManHinhChinh
             QuanLyKH_ThemKH f = new QuanLyKH_ThemKH();
             f.ShowDialog();
         }
+
+        private void lvwDanhSachKH_SelectedIndexChanged(object sender, EventArgs e)
+        {            
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (lvwDanhSachKH.SelectedItems.Count != 0)
+            {
+                KhachHang kh = new KhachHang();
+                ListView.SelectedListViewItemCollection collection = lvwDanhSachKH.SelectedItems;
+                foreach (ListViewItem item in collection)
+                {
+                    kh.MaKhachHang = Convert.ToInt32(item.SubItems[1].Text);
+                    kh.Ho = item.SubItems[2].Text;
+                    kh.Ten = item.SubItems[3].Text;
+                    kh.Email = item.SubItems[4].Text;
+                    kh.DiaChi = item.SubItems[5].Text;
+                    kh.SoDienThoai = item.SubItems[6].Text;
+                }
+                QuanLyKH_SuaKH f = new QuanLyKH_SuaKH(kh.MaKhachHang, kh.Ho,kh.Ten,kh.Email,kh.DiaChi,kh.SoDienThoai);
+                f.ShowDialog();
+            }
+        }
     }
 }

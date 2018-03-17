@@ -15,5 +15,10 @@ namespace ManHinhChinh
         {
             InitializeComponent();
         }
+
+        private void btnThemSach_ThemSach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

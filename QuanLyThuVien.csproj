@@ -116,6 +116,18 @@
     <Compile Include="QuanLySach.Designer.cs">
       <DependentUpon>QuanLySach.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLySach_SuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLySach_SuaSach.Designer.cs">
+      <DependentUpon>QuanLySach_SuaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach_ThemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLySach_ThemSach.Designer.cs">
+      <DependentUpon>QuanLySach_ThemSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyThueSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLySach.resx">
       <DependentUpon>QuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLySach_SuaSach.resx">
+      <DependentUpon>QuanLySach_SuaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLySach_ThemSach.resx">
+      <DependentUpon>QuanLySach_ThemSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyThueSach.resx">
       <DependentUpon>QuanLyThueSach.cs</DependentUpon>

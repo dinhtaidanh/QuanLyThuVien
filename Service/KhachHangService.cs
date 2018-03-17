@@ -48,6 +48,11 @@ namespace ManHinhChinh.Service
             var rs = GetKhachHangById(model.MaKhachHang);
             if (rs != null)
             {
+                rs.Ho = model.Ho ;
+                rs.Ten = model.Ten ; 
+                rs.Email = model.Email ;
+                rs.DiaChi = model.DiaChi ;
+                rs.SoDienThoai = model.SoDienThoai;
                 qLTV.SaveChanges();
                 return rs;
             }

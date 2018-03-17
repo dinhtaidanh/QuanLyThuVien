@@ -35,9 +35,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,8 +59,9 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.lvwDanhSach_Sach.FullRowSelect = true;
             this.lvwDanhSach_Sach.Location = new System.Drawing.Point(25, 76);
-            this.lvwDanhSach_Sach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwDanhSach_Sach.Margin = new System.Windows.Forms.Padding(2);
             this.lvwDanhSach_Sach.Name = "lvwDanhSach_Sach";
             this.lvwDanhSach_Sach.Size = new System.Drawing.Size(455, 405);
             this.lvwDanhSach_Sach.TabIndex = 14;
@@ -92,34 +90,14 @@
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Số Lượng";
-            this.columnHeader6.Width = 70;
-            // 
-            // columnHeader6
-            // 
             this.columnHeader6.Text = "Còn Lại";
             this.columnHeader6.Width = 70;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Mã KH Mượn";
-            this.columnHeader7.Width = 90;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Giá Thuê";
-            this.columnHeader8.Width = 80;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Vị Trí";
-            this.columnHeader9.Width = 70;
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(597, 378);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(79, 67);
             this.btnThoat.TabIndex = 11;
@@ -130,7 +108,7 @@
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(20, 41);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(58, 55);
             this.btnThem.TabIndex = 1;
@@ -144,9 +122,8 @@
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(539, 94);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 170);
             this.groupBox1.Size = new System.Drawing.Size(250, 138);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -154,15 +131,14 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(135, 50);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(142, 41);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(58, 55);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // label1
             // 
             this.label1.AutoSize = true;
@@ -177,17 +153,16 @@
             // txtTimKiemSach
             // 
             this.txtTimKiemSach.Location = new System.Drawing.Point(227, 28);
-            this.txtTimKiemSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiemSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiemSach.Multiline = true;
             this.txtTimKiemSach.Name = "txtTimKiemSach";
             this.txtTimKiemSach.Size = new System.Drawing.Size(150, 28);
             this.txtTimKiemSach.TabIndex = 15;
             // 
-            this.btnChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // btnTimKiemSach
             // 
             this.btnTimKiemSach.Location = new System.Drawing.Point(404, 28);
-            this.btnTimKiemSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiemSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemSach.Name = "btnTimKiemSach";
             this.btnTimKiemSach.Size = new System.Drawing.Size(58, 28);
             this.btnTimKiemSach.TabIndex = 16;
@@ -206,7 +181,7 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLySach";
             this.Text = "QuanLySach";
             this.Load += new System.EventHandler(this.QuanLySach_Load);
