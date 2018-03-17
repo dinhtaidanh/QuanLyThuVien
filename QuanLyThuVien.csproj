@@ -35,10 +35,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -96,6 +98,18 @@
     <Compile Include="QuanLyKhachHang.Designer.cs">
       <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKH_SuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKH_SuaKH.Designer.cs">
+      <DependentUpon>QuanLyKH_SuaKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKH_ThemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKH_ThemKH.Designer.cs">
+      <DependentUpon>QuanLyKH_ThemKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +152,12 @@
     </Compile>
     <EmbeddedResource Include="QuanLyKhachHang.resx">
       <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKH_SuaKH.resx">
+      <DependentUpon>QuanLyKH_SuaKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKH_ThemKH.resx">
+      <DependentUpon>QuanLyKH_ThemKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLySach.resx">
       <DependentUpon>QuanLySach.cs</DependentUpon>
