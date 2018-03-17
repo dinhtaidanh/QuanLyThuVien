@@ -42,17 +42,15 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiemSach = new System.Windows.Forms.TextBox();
-            this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnTimKiemSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Số Lượng";
+            this.columnHeader4.Text = "Tác Giả";
             this.columnHeader4.Width = 70;
             // 
             // lvwDanhSach_Sach
@@ -63,14 +61,11 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader6});
             this.lvwDanhSach_Sach.Location = new System.Drawing.Point(25, 76);
             this.lvwDanhSach_Sach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lvwDanhSach_Sach.Name = "lvwDanhSach_Sach";
-            this.lvwDanhSach_Sach.Size = new System.Drawing.Size(669, 330);
+            this.lvwDanhSach_Sach.Size = new System.Drawing.Size(455, 405);
             this.lvwDanhSach_Sach.TabIndex = 14;
             this.lvwDanhSach_Sach.UseCompatibleStateImageBehavior = false;
             this.lvwDanhSach_Sach.View = System.Windows.Forms.View.Details;
@@ -87,13 +82,18 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Mã Loại Sách";
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Text = "Thể Loại";
+            this.columnHeader3.Width = 70;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Mã NXB";
-            this.columnHeader5.Width = 70;
+            this.columnHeader5.Text = "Nhà Xuất Bản";
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Số Lượng";
+            this.columnHeader6.Width = 70;
             // 
             // columnHeader6
             // 
@@ -118,7 +118,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(866, 266);
+            this.btnThoat.Location = new System.Drawing.Point(597, 378);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(79, 67);
@@ -136,17 +136,17 @@
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(785, 36);
+            this.groupBox1.Location = new System.Drawing.Point(539, 94);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(244, 170);
             this.groupBox1.Size = new System.Drawing.Size(250, 138);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -154,7 +154,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(164, 41);
+            this.btnXoa.Location = new System.Drawing.Point(135, 50);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(58, 55);
@@ -162,16 +162,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(88, 41);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(58, 55);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -192,17 +183,7 @@
             this.txtTimKiemSach.Size = new System.Drawing.Size(150, 28);
             this.txtTimKiemSach.TabIndex = 15;
             // 
-            // btnChiTiet
-            // 
-            this.btnChiTiet.Location = new System.Drawing.Point(709, 76);
             this.btnChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(58, 55);
-            this.btnChiTiet.TabIndex = 16;
-            this.btnChiTiet.Text = "Chi Tiết";
-            this.btnChiTiet.UseVisualStyleBackColor = true;
-            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
-            // 
             // btnTimKiemSach
             // 
             this.btnTimKiemSach.Location = new System.Drawing.Point(404, 28);
@@ -218,9 +199,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 444);
+            this.ClientSize = new System.Drawing.Size(818, 546);
             this.Controls.Add(this.btnTimKiemSach);
-            this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.txtTimKiemSach);
             this.Controls.Add(this.lvwDanhSach_Sach);
             this.Controls.Add(this.btnThoat);
@@ -248,14 +228,9 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.TextBox txtTimKiemSach;
-        private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnTimKiemSach;
     }
 }

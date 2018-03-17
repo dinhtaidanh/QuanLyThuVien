@@ -24,9 +24,10 @@ namespace ManHinhChinh
             this.Close();
         }
 
-        private void btnChiTiet_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-
+            QuanLySach_ThemSach f = new QuanLySach_ThemSach();
+            f.ShowDialog();
         }
 
         private void QuanLySach_Load(object sender, EventArgs e)
