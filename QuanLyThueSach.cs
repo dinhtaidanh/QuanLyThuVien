@@ -25,5 +25,11 @@ namespace ManHinhChinh
         {
             this.Close();
         }
+
+        private void cbbMaDG_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    
     }
 }
