@@ -8,12 +8,16 @@ namespace ManHinhChinh.Interface
 {
     public interface ISach
     {
-        List<string> GetLoaiSach();
         List<Sach> GetSach();
         Sach InsertSach(Sach model);
-        Sach DeleteSach(Sach model);
+        Sach DeleteSach(int masach);
         Sach UpdateSach(Sach model);
         List<Sach> GetSachByTheLoai(string theloai);
         List<Sach> GetSachByTen(string ten);
+        Sach GetSachById(int masach);
+        ThueSach MuonSach(int makhachhang, int masach, DateTime ngaytra);
+        ThueSach TraSach(int makhachhang, int masach);
+        ThueSach GetThueSach(int makhachhang, int masach);
+        List<ThueSach> GetThueSachById(int makhachhang);
     }
 }

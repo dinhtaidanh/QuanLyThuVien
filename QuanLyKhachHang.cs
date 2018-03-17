@@ -39,8 +39,7 @@ namespace ManHinhChinh
                 item.SubItems.Add(k.SoDienThoai);
                 lvwDanhSachKH.Items.Add(item);
             }
-            KhachHang khachHang = new KhachHang() { MaKhachHang="1", Ho="abc", Ten="abc", DiaChi="abc", Email="abc", SoDienThoai= "abc" };
-            khachHangService.InsertKhachHang(khachHang);
+           
         }
     }
 }

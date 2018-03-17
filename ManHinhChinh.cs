@@ -8,42 +8,31 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using ManHinhChinh.Model;
+using ManHinhChinh.Service;
+
 namespace ManHinhChinh
 {
     public partial class ManHinhChinh : Form
     {
-        Connection cn;
         public ManHinhChinh()
         {
             InitializeComponent();
             lvwDanhSach.MultiSelect = false;
-            cn = new Connection();
-            string queryString = "SELECT * FROM Sach";
             try
             {
-                OleDbCommand command= cn.GetDbCommand(queryString);
-                OleDbDataReader reader = command.ExecuteReader();  //thực thi sql và trả về kết quả
-                List<Sach> lstSach = new List<Sach>();
-                while (reader.Read())  //đọc kết quả
-                {
-                    Sach sach = new Sach();
-                    sach.MaSach = Convert.ToInt32(reader[0]);
-                    sach.TenSach = reader[1].ToString();
-                    sach.TheLoai = reader[2].ToString();
-                    sach.TacGia = reader[3].ToString();
-                    sach.NhaXuatBan = reader[4].ToString();
-                    sach.SoLuong = Convert.ToInt32(reader[5]);
-                    lstSach.Add(sach);
 
-                    ListViewItem item = new ListViewItem();
-                    item.SubItems.Add(sach.MaSach.ToString());
-                    item.SubItems.Add(sach.TenSach);
-                    item.SubItems.Add(sach.SoLuong.ToString());
-                    item.SubItems.Add(sach.TacGia.ToString());
-                    item.SubItems.Add(sach.TheLoai.ToString());
-                    lvwDanhSach.Items.Add(item);
+                SachService sachService = new SachService();
+                List<Sach> lst = sachService.GetSach();
+                foreach(Sach item in lst)
+                {
+                    ListViewItem listViewItem = new ListViewItem();
+                    listViewItem.SubItems.Add(item.MaSach.ToString());
+                    listViewItem.SubItems.Add(item.TenSach);
+                    listViewItem.SubItems.Add(item.SoLuong.ToString());
+                    listViewItem.SubItems.Add(item.TacGia.ToString());
+                    listViewItem.SubItems.Add(item.TheLoai.ToString());
+                    lvwDanhSach.Items.Add(listViewItem);
                 }
-                reader.Close();
             }
             catch (Exception ex)
             {
