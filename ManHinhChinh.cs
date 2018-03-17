@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using ManHinhChinh.Model;
+using ManHinhChinh.Service;
+
 namespace ManHinhChinh
 {
     public partial class ManHinhChinh : Form
@@ -15,44 +18,27 @@ namespace ManHinhChinh
         {
             InitializeComponent();
             lvwDanhSach.MultiSelect = false;
-            List<Sach> lstSach = new List<Sach>();
-            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\ThuVien.mdb";
-            string queryString = "SELECT * FROM Sach";
-            OleDbConnection connection = new OleDbConnection(connectionString) ;   //tạo lớp kết nối vào .mbd
-            using (OleDbCommand command = new OleDbCommand(queryString, connection))    //tạo lớp lệnh sql sử dụng lớp kết nối trên
+            try
             {
-                try
-                {
-                    connection.Open();  //bắt đầu kết nối
-                    OleDbDataReader reader = command.ExecuteReader();  //thực thi sql và trả về kết quả
 
-                    while (reader.Read())  //đọc kết quả
-                    {
-                        Sach sach = new Sach();
-                        sach.MaSach=Convert.ToInt32(reader[0]);
-                        sach.TenSach = reader[1].ToString();
-                        sach.TheLoai = reader[2].ToString();
-                        sach.TacGia = reader[3].ToString();
-                        sach.NhaXuatBan = reader[4].ToString();
-                        sach.SoLuong = Convert.ToInt32(reader[5]);
-                        lstSach.Add(sach);
-
-                        ListViewItem item = new ListViewItem();
-                        item.SubItems.Add(sach.MaSach.ToString());
-                        item.SubItems.Add(sach.TenSach);
-                        item.SubItems.Add(sach.SoLuong.ToString());
-                        item.SubItems.Add(sach.TacGia.ToString());
-                        item.SubItems.Add(sach.TheLoai.ToString());
-                        lvwDanhSach.Items.Add(item);
-                    }
-                    reader.Close();
-                   
-                }
-                catch (Exception ex)
+                SachService sachService = new SachService();
+                List<Sach> lst = sachService.GetSach();
+                foreach(Sach item in lst)
                 {
-                    Console.WriteLine(ex.Message);
+                    ListViewItem listViewItem = new ListViewItem();
+                    listViewItem.SubItems.Add(item.MaSach.ToString());
+                    listViewItem.SubItems.Add(item.TenSach);
+                    listViewItem.SubItems.Add(item.SoLuong.ToString());
+                    listViewItem.SubItems.Add(item.TacGia.ToString());
+                    listViewItem.SubItems.Add(item.TheLoai.ToString());
+                    lvwDanhSach.Items.Add(listViewItem);
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
         private void btnQuanLiKH_Click(object sender, EventArgs e)
@@ -127,5 +113,9 @@ namespace ManHinhChinh
 
         }
 
+        private void ManHinhChinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
