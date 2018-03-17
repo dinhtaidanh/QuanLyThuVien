@@ -47,7 +47,7 @@ namespace ManHinhChinh
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -70,7 +70,7 @@ namespace ManHinhChinh
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
     }

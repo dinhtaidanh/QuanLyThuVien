@@ -42,10 +42,10 @@ namespace ManHinhChinh
                     lvwDanhSachKH.Items.Add(item);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -67,17 +67,16 @@ namespace ManHinhChinh
                     lvwDanhSachKH.Items.Add(item);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            QuanLyKH_ThemKH f = new QuanLyKH_ThemKH();
-            f.ShowDialog();
+            QuanLyKH_ThemKH quanLyKH_ThemKH = new QuanLyKH_ThemKH();
+            quanLyKH_ThemKH.Show();
         }
     }
 }
