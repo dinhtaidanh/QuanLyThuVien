@@ -140,6 +140,7 @@
             this.tabmuon.Size = new System.Drawing.Size(913, 599);
             this.tabmuon.TabIndex = 0;
             this.tabmuon.Text = "Quản Lý Mượn Sách";
+            this.tabmuon.Click += new System.EventHandler(this.tabmuon_Click);
             // 
             // groupBox7
             // 
@@ -214,7 +215,9 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader12,
+            this.columnHeader13});
             this.lvwDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwDanhSach.FullRowSelect = true;
             this.lvwDanhSach.GridLines = true;
@@ -227,28 +230,28 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã Độc Giả";
-            this.columnHeader1.Width = 146;
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Mã Sách";
+            this.columnHeader2.Text = "Mã Độc Giả";
             this.columnHeader2.Width = 130;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Số Lượng";
+            this.columnHeader3.Text = "Mã Sách";
             this.columnHeader3.Width = 136;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Ngày Mượn";
+            this.columnHeader4.Text = "Số Lượng";
             this.columnHeader4.Width = 235;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Ngày Hẹn Trả";
-            this.columnHeader5.Width = 460;
+            this.columnHeader5.Text = "Ngày Mượn";
+            this.columnHeader5.Width = 130;
             // 
             // btnKetThuc
             // 
@@ -362,6 +365,7 @@
             this.txtNhaXuatBan.Name = "txtNhaXuatBan";
             this.txtNhaXuatBan.Size = new System.Drawing.Size(181, 29);
             this.txtNhaXuatBan.TabIndex = 8;
+            this.txtSL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // label19
             // 
@@ -482,6 +486,7 @@
             // 
             // lbTinhTrangTraSach
             // 
+            this.lbTinhTrangTraSach.Location = new System.Drawing.Point(671, 195);
             this.lbTinhTrangTraSach.Location = new System.Drawing.Point(671, 195);
             this.lbTinhTrangTraSach.Name = "lbTinhTrangTraSach";
             this.lbTinhTrangTraSach.Size = new System.Drawing.Size(175, 24);
@@ -806,6 +811,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyThueSach";
             this.Text = "QuanLyThueSach";
+            this.Load += new System.EventHandler(this.QuanLyThueSach_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabmuon.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);

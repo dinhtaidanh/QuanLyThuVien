@@ -13,5 +13,6 @@ namespace ManHinhChinh.Interface
         KhachHang UpdateKhachHang(KhachHang model);
         KhachHang DeleteKhachHang(int makhachhang);
         KhachHang GetKhachHangById(int makhachhang);
+        List<KhachHang> GetKhachHangByName(string tenkhachhang);
     }
 }

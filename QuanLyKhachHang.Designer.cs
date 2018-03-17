@@ -173,6 +173,7 @@
             this.btnTimKiemKH.TabIndex = 18;
             this.btnTimKiemKH.Text = "Tìm Kiếm";
             this.btnTimKiemKH.UseVisualStyleBackColor = true;
+            this.btnTimKiemKH.Click += new System.EventHandler(this.btnTimKiemKH_Click);
             // 
             // txtTimKiemKH
             // 

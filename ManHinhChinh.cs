@@ -17,28 +17,6 @@ namespace ManHinhChinh
         public ManHinhChinh()
         {
             InitializeComponent();
-            lvwDanhSach.MultiSelect = false;
-            try
-            {
-
-                SachService sachService = new SachService();
-                List<Sach> lst = sachService.GetSach();
-                foreach(Sach item in lst)
-                {
-                    ListViewItem listViewItem = new ListViewItem();
-                    listViewItem.SubItems.Add(item.MaSach.ToString());
-                    listViewItem.SubItems.Add(item.TenSach);
-                    listViewItem.SubItems.Add(item.SoLuong.ToString());
-                    listViewItem.SubItems.Add(item.TacGia.ToString());
-                    listViewItem.SubItems.Add(item.TheLoai.ToString());
-                    lvwDanhSach.Items.Add(listViewItem);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            
         }
 
         private void btnQuanLiKH_Click(object sender, EventArgs e)
@@ -114,6 +92,31 @@ namespace ManHinhChinh
         }
 
         private void ManHinhChinh_Load(object sender, EventArgs e)
+        {
+            lvwDanhSach.MultiSelect = false;
+            try
+            {
+
+                SachService sachService = new SachService();
+                List<Sach> lst = sachService.GetSach();
+                foreach (Sach item in lst)
+                {
+                    ListViewItem listViewItem = new ListViewItem();
+                    listViewItem.SubItems.Add(item.MaSach.ToString());
+                    listViewItem.SubItems.Add(item.TenSach);
+                    listViewItem.SubItems.Add(item.SoLuong.ToString());
+                    listViewItem.SubItems.Add(item.TacGia.ToString());
+                    listViewItem.SubItems.Add(item.TheLoai.ToString());
+                    lvwDanhSach.Items.Add(listViewItem);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
         {
 
         }

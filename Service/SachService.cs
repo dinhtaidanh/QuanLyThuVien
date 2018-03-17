@@ -39,7 +39,7 @@ namespace ManHinhChinh.Service
             return qLTV.Saches.Where(x => x.TheLoai.Equals(theloai)).ToList();
         }
 
-        public ThueSach GetThueSach(int makhachhang, int masach)
+        public ThueSach GetThueSachKhach(int makhachhang, int masach)
         {
             return qLTV.ThueSaches.FirstOrDefault(x => x.MaKhachHang == makhachhang && x.MaSach == masach);
         }
@@ -83,7 +83,7 @@ namespace ManHinhChinh.Service
                 KhachHangService khachHangService = new KhachHangService();
                 if (khachHangService.GetKhachHangById(makhachhang) != null)
                 {
-                    ThueSach thueSach = GetThueSach(makhachhang, masach);
+                    ThueSach thueSach = GetThueSachKhach(makhachhang, masach);
                     if (thueSach != null)
                     {
                         thueSach.TinhTrang = "0";
@@ -106,6 +106,11 @@ namespace ManHinhChinh.Service
                 return rs;
             }
             return null;
+        }
+
+        public List<ThueSach> GetThueSach()
+        {
+            return qLTV.ThueSaches.ToList();
         }
     }
 }
