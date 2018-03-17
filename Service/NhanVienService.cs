@@ -25,6 +25,11 @@ namespace ManHinhChinh.Service
             return qLTV.NhanViens.ToList();
         }
 
+        public NhanVien GetNhanVienByUser(string ten, string matkhau)
+        {
+            return qLTV.NhanViens.FirstOrDefault(x => x.TenTaiKhoan.Equals(ten) && x.MatKhau.Equals(matkhau));
+        }
+
         public NhanVien InsertNhanVien(NhanVien model)
         {
             return qLTV.NhanViens.Add(model);

@@ -33,6 +33,11 @@ namespace ManHinhChinh.Service
             return qLTV.KhachHangs.FirstOrDefault(x => x.MaKhachHang == makhachhang);
         }
 
+        public List<KhachHang> GetKhachHangByName(string tenkhachhang)
+        {
+            return qLTV.KhachHangs.Where(x => x.Ten.Contains(tenkhachhang)).ToList();
+        }
+
         public KhachHang InsertKhachHang(KhachHang model)
         {
             return qLTV.KhachHangs.Add(model);

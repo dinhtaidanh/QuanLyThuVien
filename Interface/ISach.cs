@@ -17,7 +17,8 @@ namespace ManHinhChinh.Interface
         Sach GetSachById(int masach);
         ThueSach MuonSach(int makhachhang, int masach, DateTime ngaytra);
         ThueSach TraSach(int makhachhang, int masach);
-        ThueSach GetThueSach(int makhachhang, int masach);
+        ThueSach GetThueSachKhach(int makhachhang, int masach);
         List<ThueSach> GetThueSachById(int makhachhang);
+        List<ThueSach> GetThueSach();
     }
 }
