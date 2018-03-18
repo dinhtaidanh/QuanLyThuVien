@@ -9,11 +9,11 @@ using System.Text;
 
 namespace ManHinhChinh.Service
 {
-    public class KhachHangService 
+    public class KhachHangService : IKhachHang
     {
         QLTVEntities qLTV = new QLTVEntities();
 
-        public void DeleteKhachHang(int makhachhang)
+        public KhachHang DeleteKhachHang(int makhachhang)
         {
             var rs = GetKhachHangById(makhachhang);
             if (rs != null)
@@ -21,6 +21,7 @@ namespace ManHinhChinh.Service
                 qLTV.KhachHangs.Remove(rs);
                 qLTV.SaveChanges();
             }
+            return null;
         }
 
         public List<KhachHang> GetKhachHang()
@@ -38,10 +39,11 @@ namespace ManHinhChinh.Service
             return qLTV.KhachHangs.Where(x => x.Ten.Contains(tenkhachhang)).ToList();
         }
 
-        public void InsertKhachHang(KhachHang model)
+        public KhachHang InsertKhachHang(KhachHang model)
         {
             qLTV.KhachHangs.Add(model);
             qLTV.SaveChanges();
+            return null;
         }
 
         public KhachHang UpdateKhachHang(KhachHang model)
