@@ -5,18 +5,18 @@ using System.Linq;
 using System.Text;
 namespace ManHinhChinh.Service
 {
-    public class SachService: ISach
+    public class SachService
     {
         QLTVEntities qLTV = new QLTVEntities();
 
-        public Sach DeleteSach(int masach)
+        public void DeleteSach(int masach)
         {
             var rs = GetSachById(masach);
             if (rs != null)
             {
-                return qLTV.Saches.Remove(rs);
+                qLTV.Saches.Remove(rs);
+                qLTV.SaveChanges();
             }
-            return null;
         }
 
         public List<Sach> GetSach()
@@ -49,31 +49,16 @@ namespace ManHinhChinh.Service
             return qLTV.ThueSaches.Where(x => x.MaKhachHang == makhachhang && x.TinhTrang.Equals("1")).ToList();
         }
 
-        public Sach InsertSach(Sach model)
+        public void InsertSach(Sach model)
         {
-            return qLTV.Saches.Add(model);
+            qLTV.Saches.Add(model);
+            qLTV.SaveChanges();
         }
 
-        public ThueSach MuonSach(int makhachhang, int masach, DateTime ngaytra)
+        public void ChoThueSach(ThueSach model)
         {
-            if (GetSachById(masach) != null)
-            {
-                KhachHangService khachHangService = new KhachHangService();
-                if (khachHangService.GetKhachHangById(makhachhang) != null)
-                {
-                    ThueSach thueSach = new ThueSach()
-                    {
-                        MaKhachHang = makhachhang,
-                        MaSach = masach,
-                        NgayThue = DateTime.Now,
-                        NgayTra= ngaytra,
-                        TinhTrang= "1"
-                    };
-                    return qLTV.ThueSaches.Add(thueSach);
-                }
-                return null;
-            }
-            return null;
+            qLTV.ThueSaches.Add(model);
+            qLTV.SaveChanges();
         }
 
         public ThueSach TraSach(int makhachhang, int masach)
@@ -102,6 +87,11 @@ namespace ManHinhChinh.Service
             var rs = qLTV.Saches.FirstOrDefault(x => x.MaSach.Equals(model.MaSach));
             if (rs != null)
             {
+                rs.TenSach = model.TenSach;
+                rs.TheLoai = model.TheLoai;
+                rs.TacGia = model.TacGia;
+                rs.NhaXuanBan = model.NhaXuanBan;
+                rs.SoLuong = model.SoLuong;
                 qLTV.SaveChanges();
                 return rs;
             }
