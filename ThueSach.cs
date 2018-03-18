@@ -16,8 +16,8 @@ namespace ManHinhChinh
     {
         public int MaKhachHang { get; set; }
         public int MaSach { get; set; }
-        public Nullable<System.DateTime> NgayThue { get; set; }
-        public Nullable<System.DateTime> NgayTra { get; set; }
+        public DateTime NgayThue { get; set; }
+        public DateTime NgayTra { get; set; }
         public string TinhTrang { get; set; }
     }
 }

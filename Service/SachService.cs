@@ -61,6 +61,8 @@ namespace ManHinhChinh.Service
         {                      
             qLTV.ThueSaches.Add(model);
             qLTV.SaveChanges();
+            qLTV.ThueSaches.Add(model);
+            qLTV.SaveChanges();
             return null;
         }
 
