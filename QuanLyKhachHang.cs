@@ -117,12 +117,10 @@ namespace ManHinhChinh
                 {
                     khachHangService.DeleteKhachHang(kh.MaKhachHang);
                     MessageBox.Show("Xóa thành công!");
-                    this.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Xóa thất bại!");
-                    this.Close();
                 }
             }
             

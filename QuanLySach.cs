@@ -99,7 +99,21 @@ namespace ManHinhChinh
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            ListView.SelectedListViewItemCollection collection = lvwDanhSach_Sach.SelectedItems;
+            foreach (ListViewItem item in collection)
+            {
+                Sach sach = new Sach();
+                sach.MaSach = Convert.ToInt32(item.SubItems[1].Text);
+                try
+                {
+                    sachService.DeleteSach(sach.MaSach);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                }
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
