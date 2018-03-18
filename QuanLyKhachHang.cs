@@ -13,11 +13,11 @@ namespace ManHinhChinh
 {
     public partial class QuanLyKhachHang : Form
     {
-        KhachHangService khachHangService;
+        KhachHangService khachHangService = new KhachHangService();
         public QuanLyKhachHang()
         {
             InitializeComponent();
-            khachHangService = new KhachHangService();
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace ManHinhChinh
 
         private void btnTimKiemKH_Click(object sender, EventArgs e)
         {
+            lvwDanhSachKH.Items.Clear();
             try
             {
                 List<KhachHang> lst = khachHangService.GetKhachHangByName(txtTimKiemKH.Text);
@@ -88,10 +89,11 @@ namespace ManHinhChinh
         {
             if (lvwDanhSachKH.SelectedItems.Count != 0)
             {
-                KhachHang kh = new KhachHang();
+                
                 ListView.SelectedListViewItemCollection collection = lvwDanhSachKH.SelectedItems;
+                KhachHang kh = new KhachHang();
                 foreach (ListViewItem item in collection)
-                {
+                {                 
                     kh.MaKhachHang = Convert.ToInt32(item.SubItems[1].Text);
                     kh.Ho = item.SubItems[2].Text;
                     kh.Ten = item.SubItems[3].Text;
@@ -101,6 +103,53 @@ namespace ManHinhChinh
                 }
                 QuanLyKH_SuaKH f = new QuanLyKH_SuaKH(kh.MaKhachHang, kh.Ho,kh.Ten,kh.Email,kh.DiaChi,kh.SoDienThoai);
                 f.ShowDialog();
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection collection = lvwDanhSachKH.SelectedItems;
+            foreach (ListViewItem item in collection)
+            {
+                KhachHang kh = new KhachHang();
+                kh.MaKhachHang = Convert.ToInt32(item.SubItems[1].Text);
+                try
+                {
+                    khachHangService.DeleteKhachHang(kh.MaKhachHang);
+                    MessageBox.Show("Xóa thành công!");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                    this.Close();
+                }
+            }
+            
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            lvwDanhSachKH.Items.Clear();
+            try
+            {
+                KhachHangService s = new KhachHangService();
+                List<KhachHang> lst = s.GetKhachHang();
+                foreach (KhachHang k in lst)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Add(k.MaKhachHang.ToString());
+                    item.SubItems.Add(k.Ho);
+                    item.SubItems.Add(k.Ten);
+                    item.SubItems.Add(k.Email);
+                    item.SubItems.Add(k.DiaChi);
+                    item.SubItems.Add(k.SoDienThoai);
+                    lvwDanhSachKH.Items.Add(item);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }

@@ -74,9 +74,11 @@ namespace ManHinhChinh
                 kh.SoDienThoai = txtSDT_Sua.Text;
                 khs.UpdateKhachHang(kh);
                 MessageBox.Show("Sửa thành công!");
+                this.Close();
             }
             catch(Exception ex){
                 MessageBox.Show("Không thể sửa!");
+                this.Close();
             }
         }
     }

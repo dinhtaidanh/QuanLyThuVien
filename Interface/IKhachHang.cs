@@ -9,9 +9,9 @@ namespace ManHinhChinh.Interface
     public interface IKhachHang
     {
         List<KhachHang> GetKhachHang();
-        KhachHang InsertKhachHang(KhachHang model);
-        KhachHang UpdateKhachHang(KhachHang model);
-        KhachHang DeleteKhachHang(int makhachhang);
+        void InsertKhachHang(KhachHang model);
+        void UpdateKhachHang(KhachHang model);
+        void DeleteKhachHang(int makhachhang);
         KhachHang GetKhachHangById(int makhachhang);
         List<KhachHang> GetKhachHangByName(string tenkhachhang);
     }

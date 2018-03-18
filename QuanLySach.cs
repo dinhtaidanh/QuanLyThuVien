@@ -40,9 +40,10 @@ namespace ManHinhChinh
                     ListViewItem listViewItem = new ListViewItem();
                     listViewItem.SubItems.Add(item.MaSach.ToString());
                     listViewItem.SubItems.Add(item.TenSach);
-                    listViewItem.SubItems.Add(item.SoLuong.ToString());
-                    listViewItem.SubItems.Add(item.TacGia.ToString());
-                    listViewItem.SubItems.Add(item.TheLoai.ToString());
+                    listViewItem.SubItems.Add(item.TheLoai);
+                    listViewItem.SubItems.Add(item.TacGia);
+                    listViewItem.SubItems.Add(item.NhaXuanBan);
+                    listViewItem.SubItems.Add(item.SoLuong.ToString());                  
                     lvwDanhSach_Sach.Items.Add(listViewItem);
                 }
             }
@@ -66,6 +67,41 @@ namespace ManHinhChinh
                     listViewItem.SubItems.Add(item.SoLuong.ToString());
                     listViewItem.SubItems.Add(item.TacGia.ToString());
                     listViewItem.SubItems.Add(item.TheLoai.ToString());
+                    lvwDanhSach_Sach.Items.Add(listViewItem);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnSuaSach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lvwDanhSach_Sach.Items.Clear();
+                SachService s = new SachService();
+                List<Sach> lst = s.GetSach();
+                foreach (Sach item in lst)
+                {
+                    ListViewItem listViewItem = new ListViewItem();
+                    listViewItem.SubItems.Add(item.MaSach.ToString());
+                    listViewItem.SubItems.Add(item.TenSach);
+                    listViewItem.SubItems.Add(item.TheLoai);
+                    listViewItem.SubItems.Add(item.TacGia);
+                    listViewItem.SubItems.Add(item.NhaXuanBan);
+                    listViewItem.SubItems.Add(item.SoLuong.ToString());
                     lvwDanhSach_Sach.Items.Add(listViewItem);
                 }
             }

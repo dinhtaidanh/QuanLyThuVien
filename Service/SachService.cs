@@ -5,18 +5,18 @@ using System.Linq;
 using System.Text;
 namespace ManHinhChinh.Service
 {
-    public class SachService: ISach
+    public class SachService
     {
         QLTVEntities qLTV = new QLTVEntities();
 
-        public Sach DeleteSach(int masach)
+        public void DeleteSach(int masach)
         {
             var rs = GetSachById(masach);
             if (rs != null)
             {
-                return qLTV.Saches.Remove(rs);
-            }
-            return null;
+                qLTV.Saches.Remove(rs);
+                qLTV.SaveChanges();
+            }           
         }
 
         public List<Sach> GetSach()
@@ -49,12 +49,13 @@ namespace ManHinhChinh.Service
             return qLTV.ThueSaches.Where(x => x.MaKhachHang == makhachhang && x.TinhTrang.Equals("1")).ToList();
         }
 
-        public Sach InsertSach(Sach model)
+        public void InsertSach(Sach model)
         {
-            return qLTV.Saches.Add(model);
+            qLTV.Saches.Add(model);
+            qLTV.SaveChanges();
         }
 
-        public ThueSach MuonSach(int makhachhang, int masach, DateTime ngaytra)
+        public ThueSach ThueSach(int makhachhang, int masach, DateTime ngaytra)
         {
             if (GetSachById(masach) != null)
             {
@@ -69,7 +70,7 @@ namespace ManHinhChinh.Service
                         NgayTra= ngaytra,
                         TinhTrang= "1"
                     };
-                    return qLTV.ThueSaches.Add(thueSach);
+                    qLTV.ThueSaches.Add(thueSach);
                 }
                 return null;
             }
