@@ -58,9 +58,7 @@ namespace ManHinhChinh.Service
         }
 
         public Sach ChoThueSach(ThueSach model)
-        {                      
-            qLTV.ThueSaches.Add(model);
-            qLTV.SaveChanges();
+        {                               
             qLTV.ThueSaches.Add(model);
             qLTV.SaveChanges();
             return null;
