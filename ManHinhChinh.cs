@@ -84,9 +84,9 @@ namespace ManHinhChinh
             {
                 txtMaSach.Text = item.SubItems[1].Text;
                 txtTenSach.Text = item.SubItems[2].Text;
-                txtTheLoai.Text = item.SubItems[3].Text; 
+                txtTheLoai.Text = item.SubItems[5].Text; 
                 txtTacGia.Text = item.SubItems[4].Text;
-                txtSoLuong.Text = item.SubItems[6].Text;
+                txtSoLuong.Text = item.SubItems[3].Text;
                 
             }
 

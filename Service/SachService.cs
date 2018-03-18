@@ -16,7 +16,7 @@ namespace ManHinhChinh.Service
             {
                 qLTV.Saches.Remove(rs);
                 qLTV.SaveChanges();
-            }           
+            }
         }
 
         public List<Sach> GetSach()
@@ -55,26 +55,10 @@ namespace ManHinhChinh.Service
             qLTV.SaveChanges();
         }
 
-        public ThueSach ThueSach(int makhachhang, int masach, DateTime ngaytra)
-        {
-            if (GetSachById(masach) != null)
-            {
-                KhachHangService khachHangService = new KhachHangService();
-                if (khachHangService.GetKhachHangById(makhachhang) != null)
-                {
-                    ThueSach thueSach = new ThueSach()
-                    {
-                        MaKhachHang = makhachhang,
-                        MaSach = masach,
-                        NgayThue = DateTime.Now,
-                        NgayTra= ngaytra,
-                        TinhTrang= "1"
-                    };
-                    qLTV.ThueSaches.Add(thueSach);
-                }
-                return null;
-            }
-            return null;
+        public void ChoThueSach(ThueSach model)
+        {                      
+            qLTV.ThueSaches.Add(model);
+            qLTV.SaveChanges();
         }
 
         public ThueSach TraSach(int makhachhang, int masach)

@@ -43,7 +43,7 @@
             <PropertyRef Name="MaKhachHang" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaKhachHang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaKhachHang" Type="int" StoreGeneratedPattern="None" Nullable="false" />
           <Property Name="MaSach" Type="int" Nullable="false" />
           <Property Name="NgayThue" Type="date" />
           <Property Name="NgayTra" Type="date" />
@@ -103,7 +103,7 @@
             <PropertyRef Name="MaKhachHang" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaKhachHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="MaSach" Type="Int32" Nullable="false" />
           <Property Name="NgayThue" Type="DateTime" Precision="0" />
           <Property Name="NgayTra" Type="DateTime" Precision="0" />
