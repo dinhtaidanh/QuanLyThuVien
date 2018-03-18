@@ -78,7 +78,23 @@ namespace ManHinhChinh
 
         private void btnSuaSach_Click(object sender, EventArgs e)
         {
+            if (lvwDanhSach_Sach.SelectedItems.Count != 0)
+            {
 
+                ListView.SelectedListViewItemCollection collection = lvwDanhSach_Sach.SelectedItems;
+                Sach sach = new Sach();
+                foreach (ListViewItem item in collection)
+                {
+                    sach.MaSach = Convert.ToInt32(item.SubItems[1].Text);
+                    sach.TenSach = item.SubItems[2].Text;
+                    sach.TheLoai = item.SubItems[3].Text;
+                    sach.TacGia = item.SubItems[4].Text;
+                    sach.NhaXuanBan = item.SubItems[5].Text;
+                    sach.SoLuong = item.SubItems[6].Text;
+                }
+                QuanLySach_SuaSach f = new QuanLySach_SuaSach(sach.MaSach, sach.TenSach, sach.TheLoai, sach.TacGia, sach.NhaXuanBan, sach.SoLuong);
+                f.ShowDialog();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

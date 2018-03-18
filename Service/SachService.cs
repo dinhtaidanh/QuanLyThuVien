@@ -103,6 +103,11 @@ namespace ManHinhChinh.Service
             var rs = qLTV.Saches.FirstOrDefault(x => x.MaSach.Equals(model.MaSach));
             if (rs != null)
             {
+                rs.TenSach = model.TenSach;
+                rs.TheLoai = model.TheLoai;
+                rs.TacGia = model.TacGia;
+                rs.NhaXuanBan = model.NhaXuanBan;
+                rs.SoLuong = model.SoLuong;
                 qLTV.SaveChanges();
                 return rs;
             }

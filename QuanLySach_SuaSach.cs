@@ -6,19 +6,26 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ManHinhChinh.Service;
 
 namespace ManHinhChinh
 {
     public partial class QuanLySach_SuaSach : Form
     {
-        public QuanLySach_SuaSach()
+        Sach sach = new Sach();
+        public QuanLySach_SuaSach(int MaSach, string TenSach, string TheLoai, string TacGia, string NXB, string SoLuong)
         {
             InitializeComponent();
+            sach.MaSach = MaSach;
+            txtTenSach_SuaSach.Text = TenSach;
+            txtTheLoai_SuaSach.Text = TheLoai;
+            txtTacGia_SuaSach.Text = TacGia;
+            txtNXB_SuaSach.Text = NXB;
+            txtSoLuong_SuaSach.Text = SoLuong;
         }
 
         private void btnNull_TatCa_SuaSach_Click(object sender, EventArgs e)
         {
-            txtMaSach_SuaSach.Clear();
             txtTenSach_SuaSach.Clear();
             txtTheLoai_SuaSach.Clear();
             txtTacGia_SuaSach.Clear();
@@ -28,7 +35,6 @@ namespace ManHinhChinh
 
         private void btnNull_MaSach_SuaSach_Click(object sender, EventArgs e)
         {
-            txtMaSach_SuaSach.Clear();
         }
 
         private void btnNull_TenSach_SuaSach_Click(object sender, EventArgs e)
@@ -54,6 +60,27 @@ namespace ManHinhChinh
         private void btnNull_SoLuong_SuaSach_Click(object sender, EventArgs e)
         {
             txtSoLuong_SuaSach.Clear();
+        }
+
+        private void btnSuaSach_SuaSach_Click(object sender, EventArgs e)
+        {      
+            SachService s = new SachService();
+            sach.TenSach = txtTenSach_SuaSach.Text;
+            sach.TheLoai = txtTheLoai_SuaSach.Text;
+            sach.TacGia = txtTacGia_SuaSach.Text;
+            sach.NhaXuanBan = txtNXB_SuaSach.Text;
+            sach.SoLuong = txtSoLuong_SuaSach.Text;
+            try
+            {
+                s.UpdateSach(sach);
+                MessageBox.Show("Sửa thành công!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sửa thất bại!");
+                this.Close();
+            }
         }
     }
 }
