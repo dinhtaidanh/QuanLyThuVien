@@ -27,6 +27,10 @@ namespace ManHinhChinh.Service
 
         public NhanVien GetNhanVienByUser(string ten, string matkhau)
         {
+            if(string.IsNullOrEmpty(ten)|| string.IsNullOrEmpty(matkhau))
+            {
+                return null;
+            }
             return qLTV.NhanViens.FirstOrDefault(x => x.TenTaiKhoan.Equals(ten) && x.MatKhau.Equals(matkhau));
         }
 
