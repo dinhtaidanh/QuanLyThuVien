@@ -107,6 +107,10 @@ namespace ManHinhChinh.Service
         {
             return qLTV.ThueSaches.ToList();
         }
-        
+
+        public List<ThueSach> GetThueSachDaTra()
+        {
+            return qLTV.ThueSaches.Where(x => x.TinhTrang.Equals("0")).ToList();
+        }
     }
 }

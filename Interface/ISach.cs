@@ -20,5 +20,6 @@ namespace ManHinhChinh.Interface
         List<ThueSach> GetThueSachById(int makhachhang);
         List<ThueSach> GetThueSach();
         Sach ChoThueSach(ThueSach model);
+        List<ThueSach> GetThueSachDaTra();
     }
 }

@@ -51,6 +51,17 @@ namespace ManHinhChinh
                     listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
                     lvwDanhSach.Items.Add(listViewItem);
                 }
+                List<ThueSach> lstDaTra = sachService.GetThueSachDaTra();
+                foreach (ThueSach thuesach in lstDaTra)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.SubItems.Add(thuesach.MaKhachHang.ToString());
+                    item.SubItems.Add(thuesach.MaSach.ToString());
+                    item.SubItems.Add(thuesach.NgayThue.ToShortDateString());
+                    item.SubItems.Add(thuesach.NgayTra.ToShortDateString());
+                    item.SubItems.Add(thuesach.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
+                    lvwDanhSachTra.Items.Add(item);
+                }
             }
             catch (Exception ex)
             {
@@ -142,7 +153,113 @@ namespace ManHinhChinh
             SachService s = new SachService();
             int MaKH = Convert.ToInt32(txtMaKH_TraSach.Text);
             int MaSach = Convert.ToInt32(txtMaSach_TraSach.Text);
-            s.TraSach(MaKH, MaSach);
+            try
+            {
+                s.TraSach(MaKH, MaSach);
+                MessageBox.Show("Trả sách thành công");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi trả sách");
+            }
+            List<ThueSach> lstDaTra = s.GetThueSachDaTra();
+            lvwDanhSachTra.Items.Clear();
+            foreach (ThueSach thuesach in lstDaTra)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Add(thuesach.MaKhachHang.ToString());
+                item.SubItems.Add(thuesach.MaSach.ToString());
+                item.SubItems.Add(thuesach.NgayThue.ToShortDateString());
+                item.SubItems.Add(thuesach.NgayTra.ToShortDateString());
+                item.SubItems.Add(thuesach.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
+                lvwDanhSachTra.Items.Add(item);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaSachTim_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTheLoai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTacGia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNhaXuatBan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimSach_Tra_Click(object sender, EventArgs e)
+        {
+            SachService sachService = new SachService();
+            try
+            {
+                Sach s = new Sach();
+                s = sachService.GetSachById(Convert.ToInt32(txtMaSach_TraSach.Text));                
+                txtTenSach_Tra.Text = s.TenSach;
+                txtTheLoai_Tra.Text = s.TheLoai;
+                txtTacGia_Tra.Text = s.TacGia;
+                txtNhaXuatBan_Tra.Text = s.NhaXuanBan;
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy!");
+            }
+        }
+
+        private void btnTimKH_Tra_Click(object sender, EventArgs e)
+        {
+            KhachHangService khs = new KhachHangService();
+            try
+            {
+                KhachHang k = new KhachHang();
+                k = khs.GetKhachHangById(Convert.ToInt32(txtMaKH_TraSach.Text));
+                txtTen_Tra.Text = k.Ho + " " + k.Ten;
+                txtEmail_Tra.Text = k.Email;
+                txtSDT_Tra.Text = k.SoDienThoai;
+                txtDiaChi_Tra.Text = k.DiaChi;
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy!");
+            }
         }
     }
 }
