@@ -47,7 +47,6 @@
             this.btnQuanLiKH = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnQuanLiThueSach = new System.Windows.Forms.Button();
-            this.btnTimKiemSach = new System.Windows.Forms.Button();
             this.btnQuanLiSach = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -248,7 +247,6 @@
             // 
             this.groupBox4.Controls.Add(this.btnQuanLiKH);
             this.groupBox4.Controls.Add(this.btnQuanLiThueSach);
-            this.groupBox4.Controls.Add(this.btnTimKiemSach);
             this.groupBox4.Controls.Add(this.btnQuanLiSach);
             this.groupBox4.Controls.Add(this.btnThoat);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,19 +273,6 @@
             this.btnQuanLiThueSach.UseVisualStyleBackColor = true;
             this.btnQuanLiThueSach.Click += new System.EventHandler(this.btnQuanLiThueSach_Click);
             // 
-            // btnTimKiemSach
-            // 
-            this.btnTimKiemSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemSach.Location = new System.Drawing.Point(58, 222);
-            this.btnTimKiemSach.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTimKiemSach.Name = "btnTimKiemSach";
-            this.btnTimKiemSach.Size = new System.Drawing.Size(187, 45);
-            this.btnTimKiemSach.TabIndex = 15;
-            this.btnTimKiemSach.Text = "Tìm Kiếm Sách";
-            this.btnTimKiemSach.UseVisualStyleBackColor = true;
-            this.btnTimKiemSach.Click += new System.EventHandler(this.btnTimKiemSach_Click);
-            // 
             // btnQuanLiSach
             // 
             this.btnQuanLiSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,7 +290,7 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(58, 284);
+            this.btnThoat.Location = new System.Drawing.Point(58, 222);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(187, 45);
@@ -434,7 +419,6 @@
         private System.Windows.Forms.Button btnQuanLiKH;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnQuanLiThueSach;
-        private System.Windows.Forms.Button btnTimKiemSach;
         private System.Windows.Forms.Button btnQuanLiSach;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;

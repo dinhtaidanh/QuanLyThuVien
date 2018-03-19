@@ -42,7 +42,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnKetThuc = new System.Windows.Forms.Button();
             this.btnChoMuon = new System.Windows.Forms.Button();
@@ -75,24 +74,15 @@
             this.btnTraSach = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lvwDanhSachTra = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtMaKH_TraSach = new System.Windows.Forms.TextBox();
-            this.txtMaSach_TraSach = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtNhaXuatBan_Tra = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtTacGia_Tra = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTheLoai_Tra = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTenSach_Tra = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnTimSach_Tra = new System.Windows.Forms.Button();
+            this.btnTimKH_Tra = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.txtSDT_Tra = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -102,10 +92,21 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtTen_Tra = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.btnTimKH_Tra = new System.Windows.Forms.Button();
-            this.btnTimSach_Tra = new System.Windows.Forms.Button();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtNhaXuatBan_Tra = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTacGia_Tra = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTheLoai_Tra = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTenSach_Tra = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMaKH_TraSach = new System.Windows.Forms.TextBox();
+            this.txtMaSach_TraSach = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabmuon.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -116,8 +117,8 @@
             this.tabtra.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -225,6 +226,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
+            this.columnHeader8,
             this.columnHeader12});
             this.lvwDanhSach.Location = new System.Drawing.Point(6, 28);
             this.lvwDanhSach.Name = "lvwDanhSach";
@@ -252,13 +254,9 @@
             this.columnHeader4.Text = "Ngày thuê";
             this.columnHeader4.Width = 120;
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Ngày trả";
-            this.columnHeader5.Width = 120;
-            // 
             // columnHeader12
             // 
+            this.columnHeader12.DisplayIndex = 4;
             this.columnHeader12.Text = "Tình trạng";
             this.columnHeader12.Width = 100;
             // 
@@ -597,6 +595,10 @@
             this.lvwDanhSachTra.UseCompatibleStateImageBehavior = false;
             this.lvwDanhSachTra.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Width = 0;
+            // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Mã Độc Giả";
@@ -617,6 +619,11 @@
             this.columnHeader10.Text = "Ngày Hẹn Trả";
             this.columnHeader10.Width = 164;
             // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Tình trạng";
+            this.columnHeader14.Width = 120;
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
@@ -636,130 +643,25 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thực Hiện Trả Sách";
             // 
-            // txtMaKH_TraSach
+            // btnTimSach_Tra
             // 
-            this.txtMaKH_TraSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKH_TraSach.Location = new System.Drawing.Point(162, 33);
-            this.txtMaKH_TraSach.Name = "txtMaKH_TraSach";
-            this.txtMaKH_TraSach.Size = new System.Drawing.Size(181, 29);
-            this.txtMaKH_TraSach.TabIndex = 13;
+            this.btnTimSach_Tra.Location = new System.Drawing.Point(778, 37);
+            this.btnTimSach_Tra.Name = "btnTimSach_Tra";
+            this.btnTimSach_Tra.Size = new System.Drawing.Size(75, 28);
+            this.btnTimSach_Tra.TabIndex = 25;
+            this.btnTimSach_Tra.Text = "Tìm";
+            this.btnTimSach_Tra.UseVisualStyleBackColor = true;
+            this.btnTimSach_Tra.Click += new System.EventHandler(this.btnTimSach_Tra_Click);
             // 
-            // txtMaSach_TraSach
+            // btnTimKH_Tra
             // 
-            this.txtMaSach_TraSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSach_TraSach.Location = new System.Drawing.Point(591, 36);
-            this.txtMaSach_TraSach.Name = "txtMaSach_TraSach";
-            this.txtMaSach_TraSach.Size = new System.Drawing.Size(181, 29);
-            this.txtMaSach_TraSach.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(487, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 22);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Mã Sách:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 36);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(116, 22);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Mã Độc Giả:";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.txtNhaXuatBan_Tra);
-            this.groupBox8.Controls.Add(this.label16);
-            this.groupBox8.Controls.Add(this.txtTacGia_Tra);
-            this.groupBox8.Controls.Add(this.label8);
-            this.groupBox8.Controls.Add(this.txtTheLoai_Tra);
-            this.groupBox8.Controls.Add(this.label7);
-            this.groupBox8.Controls.Add(this.txtTenSach_Tra);
-            this.groupBox8.Controls.Add(this.label6);
-            this.groupBox8.Location = new System.Drawing.Point(480, 68);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(390, 185);
-            this.groupBox8.TabIndex = 22;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Thông tin sách:";
-            // 
-            // txtNhaXuatBan_Tra
-            // 
-            this.txtNhaXuatBan_Tra.Enabled = false;
-            this.txtNhaXuatBan_Tra.Location = new System.Drawing.Point(158, 153);
-            this.txtNhaXuatBan_Tra.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNhaXuatBan_Tra.Name = "txtNhaXuatBan_Tra";
-            this.txtNhaXuatBan_Tra.Size = new System.Drawing.Size(181, 29);
-            this.txtNhaXuatBan_Tra.TabIndex = 29;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 156);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(126, 22);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "Nhà xuất bản:";
-            // 
-            // txtTacGia_Tra
-            // 
-            this.txtTacGia_Tra.Enabled = false;
-            this.txtTacGia_Tra.Location = new System.Drawing.Point(158, 110);
-            this.txtTacGia_Tra.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTacGia_Tra.Name = "txtTacGia_Tra";
-            this.txtTacGia_Tra.Size = new System.Drawing.Size(181, 29);
-            this.txtTacGia_Tra.TabIndex = 27;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 22);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Tác giả:";
-            // 
-            // txtTheLoai_Tra
-            // 
-            this.txtTheLoai_Tra.Enabled = false;
-            this.txtTheLoai_Tra.Location = new System.Drawing.Point(158, 66);
-            this.txtTheLoai_Tra.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTheLoai_Tra.Name = "txtTheLoai_Tra";
-            this.txtTheLoai_Tra.Size = new System.Drawing.Size(181, 29);
-            this.txtTheLoai_Tra.TabIndex = 25;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 69);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 22);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Thể loại:";
-            // 
-            // txtTenSach_Tra
-            // 
-            this.txtTenSach_Tra.Enabled = false;
-            this.txtTenSach_Tra.Location = new System.Drawing.Point(158, 22);
-            this.txtTenSach_Tra.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenSach_Tra.Name = "txtTenSach_Tra";
-            this.txtTenSach_Tra.Size = new System.Drawing.Size(181, 29);
-            this.txtTenSach_Tra.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 22);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Tên sách:";
+            this.btnTimKH_Tra.Location = new System.Drawing.Point(350, 34);
+            this.btnTimKH_Tra.Name = "btnTimKH_Tra";
+            this.btnTimKH_Tra.Size = new System.Drawing.Size(75, 28);
+            this.btnTimKH_Tra.TabIndex = 24;
+            this.btnTimKH_Tra.Text = "Tìm";
+            this.btnTimKH_Tra.UseVisualStyleBackColor = true;
+            this.btnTimKH_Tra.Click += new System.EventHandler(this.btnTimKH_Tra_Click);
             // 
             // groupBox9
             // 
@@ -850,35 +752,141 @@
             this.label21.TabIndex = 22;
             this.label21.Text = "Tên:";
             // 
-            // btnTimKH_Tra
+            // groupBox8
             // 
-            this.btnTimKH_Tra.Location = new System.Drawing.Point(350, 34);
-            this.btnTimKH_Tra.Name = "btnTimKH_Tra";
-            this.btnTimKH_Tra.Size = new System.Drawing.Size(75, 28);
-            this.btnTimKH_Tra.TabIndex = 24;
-            this.btnTimKH_Tra.Text = "Tìm";
-            this.btnTimKH_Tra.UseVisualStyleBackColor = true;
-            this.btnTimKH_Tra.Click += new System.EventHandler(this.btnTimKH_Tra_Click);
+            this.groupBox8.Controls.Add(this.txtNhaXuatBan_Tra);
+            this.groupBox8.Controls.Add(this.label16);
+            this.groupBox8.Controls.Add(this.txtTacGia_Tra);
+            this.groupBox8.Controls.Add(this.label8);
+            this.groupBox8.Controls.Add(this.txtTheLoai_Tra);
+            this.groupBox8.Controls.Add(this.label7);
+            this.groupBox8.Controls.Add(this.txtTenSach_Tra);
+            this.groupBox8.Controls.Add(this.label6);
+            this.groupBox8.Location = new System.Drawing.Point(480, 68);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(390, 185);
+            this.groupBox8.TabIndex = 22;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Thông tin sách:";
             // 
-            // btnTimSach_Tra
+            // txtNhaXuatBan_Tra
             // 
-            this.btnTimSach_Tra.Location = new System.Drawing.Point(778, 37);
-            this.btnTimSach_Tra.Name = "btnTimSach_Tra";
-            this.btnTimSach_Tra.Size = new System.Drawing.Size(75, 28);
-            this.btnTimSach_Tra.TabIndex = 25;
-            this.btnTimSach_Tra.Text = "Tìm";
-            this.btnTimSach_Tra.UseVisualStyleBackColor = true;
-            this.btnTimSach_Tra.Click += new System.EventHandler(this.btnTimSach_Tra_Click);
+            this.txtNhaXuatBan_Tra.Enabled = false;
+            this.txtNhaXuatBan_Tra.Location = new System.Drawing.Point(158, 153);
+            this.txtNhaXuatBan_Tra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNhaXuatBan_Tra.Name = "txtNhaXuatBan_Tra";
+            this.txtNhaXuatBan_Tra.Size = new System.Drawing.Size(181, 29);
+            this.txtNhaXuatBan_Tra.TabIndex = 29;
             // 
-            // columnHeader13
+            // label16
             // 
-            this.columnHeader13.DisplayIndex = 4;
-            this.columnHeader13.Width = 0;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 156);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(126, 22);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "Nhà xuất bản:";
             // 
-            // columnHeader14
+            // txtTacGia_Tra
             // 
-            this.columnHeader14.Text = "Tình trạng";
-            this.columnHeader14.Width = 120;
+            this.txtTacGia_Tra.Enabled = false;
+            this.txtTacGia_Tra.Location = new System.Drawing.Point(158, 110);
+            this.txtTacGia_Tra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTacGia_Tra.Name = "txtTacGia_Tra";
+            this.txtTacGia_Tra.Size = new System.Drawing.Size(181, 29);
+            this.txtTacGia_Tra.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 22);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Tác giả:";
+            // 
+            // txtTheLoai_Tra
+            // 
+            this.txtTheLoai_Tra.Enabled = false;
+            this.txtTheLoai_Tra.Location = new System.Drawing.Point(158, 66);
+            this.txtTheLoai_Tra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTheLoai_Tra.Name = "txtTheLoai_Tra";
+            this.txtTheLoai_Tra.Size = new System.Drawing.Size(181, 29);
+            this.txtTheLoai_Tra.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 22);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Thể loại:";
+            // 
+            // txtTenSach_Tra
+            // 
+            this.txtTenSach_Tra.Enabled = false;
+            this.txtTenSach_Tra.Location = new System.Drawing.Point(158, 22);
+            this.txtTenSach_Tra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenSach_Tra.Name = "txtTenSach_Tra";
+            this.txtTenSach_Tra.Size = new System.Drawing.Size(181, 29);
+            this.txtTenSach_Tra.TabIndex = 23;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 22);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Tên sách:";
+            // 
+            // txtMaKH_TraSach
+            // 
+            this.txtMaKH_TraSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKH_TraSach.Location = new System.Drawing.Point(162, 33);
+            this.txtMaKH_TraSach.Name = "txtMaKH_TraSach";
+            this.txtMaKH_TraSach.Size = new System.Drawing.Size(181, 29);
+            this.txtMaKH_TraSach.TabIndex = 13;
+            // 
+            // txtMaSach_TraSach
+            // 
+            this.txtMaSach_TraSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSach_TraSach.Location = new System.Drawing.Point(591, 36);
+            this.txtMaSach_TraSach.Name = "txtMaSach_TraSach";
+            this.txtMaSach_TraSach.Size = new System.Drawing.Size(181, 29);
+            this.txtMaSach_TraSach.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(487, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 22);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Mã Sách:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(16, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(116, 22);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Mã Độc Giả:";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Ngày trả";
+            this.columnHeader5.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.DisplayIndex = 5;
+            this.columnHeader8.Text = "Ngày hẹn trả";
+            this.columnHeader8.Width = 120;
             // 
             // QuanLyThueSach
             // 
@@ -905,10 +913,10 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -993,5 +1001,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

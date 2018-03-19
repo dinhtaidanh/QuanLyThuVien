@@ -46,7 +46,6 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             // txtHo_Them
             // 
             this.txtHo_Them.Location = new System.Drawing.Point(85, 28);
