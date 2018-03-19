@@ -18,8 +18,9 @@ namespace ManHinhChinh.Service
             var rs = GetKhachHangById(makhachhang);
             if (rs != null)
             {              
-                qLTV.KhachHangs.Remove(rs);
+                KhachHang khachHang= qLTV.KhachHangs.Remove(rs);
                 qLTV.SaveChanges();
+                return khachHang;
             }
             return null;
         }
@@ -41,13 +42,21 @@ namespace ManHinhChinh.Service
 
         public KhachHang InsertKhachHang(KhachHang model)
         {
-            qLTV.KhachHangs.Add(model);
+            if (string.IsNullOrEmpty(model.Ho)||string.IsNullOrEmpty(model.Ten) || string.IsNullOrEmpty(model.SoDienThoai)||string.IsNullOrEmpty(model.DiaChi))
+            {
+                return null;
+            }
+            var khachhang= qLTV.KhachHangs.Add(model);
             qLTV.SaveChanges();
-            return null;
+            return khachhang;
         }
 
         public KhachHang UpdateKhachHang(KhachHang model)
         {
+            if (string.IsNullOrEmpty(model.Ho) || string.IsNullOrEmpty(model.Ten) || string.IsNullOrEmpty(model.SoDienThoai) || string.IsNullOrEmpty(model.DiaChi))
+            {
+                return null;
+            }
             var rs = GetKhachHangById(model.MaKhachHang);
             if (rs != null)
             {
