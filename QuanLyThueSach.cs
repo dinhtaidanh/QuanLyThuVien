@@ -44,9 +44,8 @@ namespace ManHinhChinh
                 foreach (ThueSach item in lst)
                 {
                     ListViewItem listViewItem = new ListViewItem();
-                    listViewItem.SubItems.Add(item.MaSach.ToString());
                     listViewItem.SubItems.Add(item.MaKhachHang.ToString());
-                    listViewItem.SubItems.Add(item.MaSach.ToString());
+                    listViewItem.SubItems.Add(item.MaSach.ToString());                  
                     listViewItem.SubItems.Add(item.NgayThue.ToString());
                     listViewItem.SubItems.Add(item.NgayTra.ToString());
                     listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
@@ -126,7 +125,7 @@ namespace ManHinhChinh
                         listViewItem.SubItems.Add(item.MaSach.ToString());
                         listViewItem.SubItems.Add(item.NgayThue.ToString());
                         listViewItem.SubItems.Add(item.NgayTra.ToString());
-                        listViewItem.SubItems.Add(item.TinhTrang.ToString());
+                        listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
                         lvwDanhSach.Items.Add(listViewItem);
                     }
 
@@ -137,6 +136,13 @@ namespace ManHinhChinh
                 }
             }
         }
-    
+
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            SachService s = new SachService();
+            int MaKH = Convert.ToInt32(txtMaKH_TraSach.Text);
+            int MaSach = Convert.ToInt32(txtMaSach_TraSach.Text);
+            s.TraSach(MaKH, MaSach);
+        }
     }
 }

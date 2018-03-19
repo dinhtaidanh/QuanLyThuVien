@@ -75,6 +75,8 @@ namespace ManHinhChinh.Service
                     if (thueSach != null)
                     {
                         thueSach.TinhTrang = "0";
+                        Sach sach = GetSachById(masach);
+                        sach.SoLuong = Convert.ToInt32(sach.SoLuong + 1).ToString();
                         qLTV.SaveChanges();
                         return thueSach;
                     };
