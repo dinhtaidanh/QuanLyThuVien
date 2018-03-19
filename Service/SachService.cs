@@ -112,5 +112,10 @@ namespace ManHinhChinh.Service
         {
             return qLTV.ThueSaches.Where(x => x.TinhTrang.Equals("0")).ToList();
         }
+
+        public List<ThueSach> GetThueSachChuaTra()
+        {
+            return qLTV.ThueSaches.Where(x => x.TinhTrang.Equals("1")).ToList();
+        }
     }
 }

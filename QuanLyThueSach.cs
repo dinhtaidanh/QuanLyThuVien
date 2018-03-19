@@ -40,8 +40,8 @@ namespace ManHinhChinh
             {
 
                 SachService sachService = new SachService();
-                List<ThueSach> lst = sachService.GetThueSach();
-                foreach (ThueSach item in lst)
+                List<ThueSach> lstChuaTra = sachService.GetThueSachChuaTra();
+                foreach (ThueSach item in lstChuaTra)
                 {
                     ListViewItem listViewItem = new ListViewItem();
                     listViewItem.SubItems.Add(item.MaKhachHang.ToString());
