@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="UnitTestKhachHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestSach.cs" />
+    <Compile Include="UnitTestThueSach.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
