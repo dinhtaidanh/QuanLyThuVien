@@ -52,9 +52,13 @@ namespace ManHinhChinh.Service
 
         public Sach InsertSach(Sach model)
         {
-            qLTV.Saches.Add(model);
+            if (string.IsNullOrEmpty(model.TenSach) || string.IsNullOrEmpty(model.TheLoai) || string.IsNullOrEmpty(model.SoLuong)|| string.IsNullOrEmpty(model.NhaXuanBan))
+            {
+                return null;
+            }
+            Sach sach= qLTV.Saches.Add(model);
             qLTV.SaveChanges();
-            return null;
+            return sach;
         }
 
         public Sach ChoThueSach(ThueSach model)
@@ -89,6 +93,10 @@ namespace ManHinhChinh.Service
 
         public Sach UpdateSach(Sach model)
         {
+            if (string.IsNullOrEmpty(model.TenSach) || string.IsNullOrEmpty(model.TheLoai) || string.IsNullOrEmpty(model.SoLuong) || string.IsNullOrEmpty(model.NhaXuanBan))
+            {
+                return null;
+            }
             var rs = qLTV.Saches.FirstOrDefault(x => x.MaSach.Equals(model.MaSach));
             if (rs != null)
             {

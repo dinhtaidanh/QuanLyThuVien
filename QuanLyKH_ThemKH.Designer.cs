@@ -46,6 +46,7 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             // txtHo_Them
             // 
             this.txtHo_Them.Location = new System.Drawing.Point(85, 28);
@@ -185,6 +186,7 @@
             this.btnXoaKH_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaKH_Them.Location = new System.Drawing.Point(46, 107);
             this.btnXoaKH_Them.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoaKH_Them.Name = "btnXoaKH_Them";
             this.btnXoaKH_Them.Name = "btnXoaKH_Them";
             this.btnXoaKH_Them.Size = new System.Drawing.Size(61, 42);
             this.btnXoaKH_Them.TabIndex = 0;

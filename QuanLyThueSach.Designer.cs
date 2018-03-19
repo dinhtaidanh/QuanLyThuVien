@@ -225,7 +225,6 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
             this.columnHeader12});
             this.lvwDanhSach.Location = new System.Drawing.Point(6, 28);
             this.lvwDanhSach.Name = "lvwDanhSach";

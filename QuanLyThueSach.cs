@@ -112,40 +112,44 @@ namespace ManHinhChinh
 
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
-            SachService sachService = new SachService();
-            if (Convert.ToInt32(sach.SoLuong) > 0)
-            {
-                try
+            if (!string.IsNullOrEmpty(txtMaSachTim.Text) && !string.IsNullOrEmpty(txtTenKhachHang.Text)) {
+                SachService sachService = new SachService();
+                sach = sachService.GetSachById(Convert.ToInt32(txtMaSachTim.Text));
+                if (Convert.ToInt32(sach.SoLuong) > 0)
                 {
-                    ThueSach thuesach = new ThueSach();
-                    thuesach.MaSach = sach.MaSach;
-                    thuesach.MaKhachHang = kh.MaKhachHang;
-                    thuesach.NgayThue = DateTime.Now.Date;
-                    thuesach.NgayTra = dtNgayHenTra.Value.Date;
-                    thuesach.TinhTrang = "1";
-                    sachService.ChoThueSach(thuesach);
-
-                    sach.SoLuong = (Convert.ToInt32(sach.SoLuong) - 1).ToString();
-                    sachService.UpdateSach(sach);
-                    lvwDanhSach.Items.Clear();
-                    List<ThueSach> lst = sachService.GetThueSach();
-                    foreach (ThueSach item in lst)
+                    try
                     {
-                        ListViewItem listViewItem = new ListViewItem();
-                        listViewItem.SubItems.Add(item.MaKhachHang.ToString());
-                        listViewItem.SubItems.Add(item.MaSach.ToString());
-                        listViewItem.SubItems.Add(item.NgayThue.ToString());
-                        listViewItem.SubItems.Add(item.NgayTra.ToString());
-                        listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
-                        lvwDanhSach.Items.Add(listViewItem);
-                    }
+                        ThueSach thuesach = new ThueSach();
+                        thuesach.MaSach = sach.MaSach;
+                        thuesach.MaKhachHang = kh.MaKhachHang;
+                        thuesach.NgayThue = DateTime.Now.Date;
+                        thuesach.NgayTra = dtNgayHenTra.Value.Date;
+                        thuesach.TinhTrang = "1";
+                        sachService.ChoThueSach(thuesach);
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Không thế cho thuê!");
+                        sach.SoLuong = (Convert.ToInt32(sach.SoLuong) - 1).ToString();
+                        sachService.UpdateSach(sach);
+                        lvwDanhSach.Items.Clear();
+                        List<ThueSach> lst = sachService.GetThueSach();
+                        foreach (ThueSach item in lst)
+                        {
+                            ListViewItem listViewItem = new ListViewItem();
+                            listViewItem.SubItems.Add(item.MaKhachHang.ToString());
+                            listViewItem.SubItems.Add(item.MaSach.ToString());
+                            listViewItem.SubItems.Add(item.NgayThue.ToString());
+                            listViewItem.SubItems.Add(item.NgayTra.ToString());
+                        listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
+                            lvwDanhSach.Items.Add(listViewItem);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Không thế cho thuê!");
+                    }
                 }
             }
+            MessageBox.Show("Không cho thuê!");
         }
 
         private void btnTraSach_Click(object sender, EventArgs e)
