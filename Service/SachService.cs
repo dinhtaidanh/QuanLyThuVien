@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 namespace ManHinhChinh.Service
 {
-    public class SachService
+    public class SachService : ISach
     {
         QLTVEntities qLTV = new QLTVEntities();
 
-        public void DeleteSach(int masach)
+        public Sach DeleteSach(int masach)
         {
             var rs = GetSachById(masach);
             if (rs != null)
@@ -17,6 +17,7 @@ namespace ManHinhChinh.Service
                 qLTV.Saches.Remove(rs);
                 qLTV.SaveChanges();
             }
+            return null;
         }
 
         public List<Sach> GetSach()
@@ -49,16 +50,18 @@ namespace ManHinhChinh.Service
             return qLTV.ThueSaches.Where(x => x.MaKhachHang == makhachhang && x.TinhTrang.Equals("1")).ToList();
         }
 
-        public void InsertSach(Sach model)
+        public Sach InsertSach(Sach model)
         {
             qLTV.Saches.Add(model);
             qLTV.SaveChanges();
+            return null;
         }
 
-        public void ChoThueSach(ThueSach model)
-        {
+        public Sach ChoThueSach(ThueSach model)
+        {                               
             qLTV.ThueSaches.Add(model);
             qLTV.SaveChanges();
+            return null;
         }
 
         public ThueSach TraSach(int makhachhang, int masach)
@@ -102,5 +105,6 @@ namespace ManHinhChinh.Service
         {
             return qLTV.ThueSaches.ToList();
         }
+        
     }
 }

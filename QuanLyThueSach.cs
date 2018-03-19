@@ -103,20 +103,20 @@ namespace ManHinhChinh
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
             SachService sachService = new SachService();
-            //if (Convert.ToInt32(sach.SoLuong) > 0)
-            //{
-                //try
-                //{
+            if (Convert.ToInt32(sach.SoLuong) > 0)
+            {
+                try
+                {
                     ThueSach thuesach = new ThueSach();
                     thuesach.MaSach = sach.MaSach;
-                    thuesach.MaKhachHang = Convert.ToInt32(txtMaKhachHang.Text);
+                    thuesach.MaKhachHang = kh.MaKhachHang;
                     thuesach.NgayThue = DateTime.Now.Date;
-                    thuesach.NgayTra = dateTimePicker1.Value.Date;
+                    thuesach.NgayTra = dtNgayHenTra.Value.Date;
                     thuesach.TinhTrang = "1";
                     sachService.ChoThueSach(thuesach);
-                    
-                    //sach.SoLuong = (Convert.ToInt32(sach.SoLuong) - 1).ToString();
-                    //sachService.UpdateSach(sach);
+
+                    sach.SoLuong = (Convert.ToInt32(sach.SoLuong) - 1).ToString();
+                    sachService.UpdateSach(sach);
                     lvwDanhSach.Items.Clear();
                     List<ThueSach> lst = sachService.GetThueSach();
                     foreach (ThueSach item in lst)
@@ -124,18 +124,18 @@ namespace ManHinhChinh
                         ListViewItem listViewItem = new ListViewItem();
                         listViewItem.SubItems.Add(item.MaKhachHang.ToString());
                         listViewItem.SubItems.Add(item.MaSach.ToString());
-                        listViewItem.SubItems.Add(item.NgayThue.ToShortDateString());
-                        listViewItem.SubItems.Add(item.NgayTra.ToShortDateString());
+                        listViewItem.SubItems.Add(item.NgayThue.ToString());
+                        listViewItem.SubItems.Add(item.NgayTra.ToString());
                         listViewItem.SubItems.Add(item.TinhTrang.ToString());
                         lvwDanhSach.Items.Add(listViewItem);
                     }
 
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Không thế cho thuê!");
-                //}
-            //}
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thế cho thuê!");
+                }
+            }
         }
     
     }

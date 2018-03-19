@@ -15,10 +15,10 @@ namespace ManHinhChinh.Interface
         List<Sach> GetSachByTheLoai(string theloai);
         List<Sach> GetSachByTen(string ten);
         Sach GetSachById(int masach);
-        ThueSach MuonSach(int makhachhang, int masach, DateTime ngaytra);
         ThueSach TraSach(int makhachhang, int masach);
         ThueSach GetThueSachKhach(int makhachhang, int masach);
         List<ThueSach> GetThueSachById(int makhachhang);
         List<ThueSach> GetThueSach();
+        Sach ChoThueSach(ThueSach model);
     }
 }
