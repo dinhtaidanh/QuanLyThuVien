@@ -15,7 +15,7 @@ namespace ManHinhChinh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManHinhChinh());
+            Application.Run(new QuanLyDangNhap());
         }
     }
 }

@@ -28,14 +28,12 @@ namespace ManHinhChinh
                 {
                     ManHinhChinh manHinhChinh = new ManHinhChinh();
                     manHinhChinh.Show();
-                    Close();
-                }
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
-
+                    //Close();
+                }           
             }
             catch (Exception)
             {
-                MessageBox.Show("Không có dữ liệu");
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
             }
         }
     }
