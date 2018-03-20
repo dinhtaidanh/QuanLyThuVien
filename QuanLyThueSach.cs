@@ -130,7 +130,7 @@ namespace ManHinhChinh
                         sach.SoLuong = (Convert.ToInt32(sach.SoLuong) - 1).ToString();
                         sachService.UpdateSach(sach);
                         lvwDanhSach.Items.Clear();
-                        List<ThueSach> lst = sachService.GetThueSach();
+                        List<ThueSach> lst = sachService.GetThueSachChuaTra();
                         foreach (ThueSach item in lst)
                         {
                             ListViewItem listViewItem = new ListViewItem();
@@ -138,7 +138,7 @@ namespace ManHinhChinh
                             listViewItem.SubItems.Add(item.MaSach.ToString());
                             listViewItem.SubItems.Add(item.NgayThue.ToString());
                             listViewItem.SubItems.Add(item.NgayTra.ToString());
-                        listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
+                            listViewItem.SubItems.Add(item.TinhTrang.Equals("1") ? "Chưa trả" : "Đã trả");
                             lvwDanhSach.Items.Add(listViewItem);
                         }
 
@@ -149,7 +149,6 @@ namespace ManHinhChinh
                     }
                 }
             }
-            MessageBox.Show("Không cho thuê!");
         }
 
         private void btnTraSach_Click(object sender, EventArgs e)

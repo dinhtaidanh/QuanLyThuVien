@@ -59,6 +59,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(150, 20);
             this.txtTen.TabIndex = 2;
+            this.txtTen.Text = "admin";
             // 
             // txtMatKhau
             // 
@@ -67,6 +68,7 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(150, 20);
             this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Text = "123";
             // 
             // btnD
             // 
