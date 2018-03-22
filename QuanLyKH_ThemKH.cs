@@ -18,11 +18,11 @@ namespace ManHinhChinh
             {
                 KhachHang khachHang = new KhachHang()
                 {
-                    Ho = txtHo_Them.Text,
-                    Ten = txtTen_Them.Text,
-                    Email = txtEmail_Them.Text,
-                    DiaChi = txtDiaChi_Them.Text,
-                    SoDienThoai = txtSDT_Them.Text
+                    Ho = txtHo_Them.Text.Trim(),
+                    Ten = txtTen_Them.Text.Trim(),
+                    Email = txtEmail_Them.Text.Trim(),
+                    DiaChi = txtDiaChi_Them.Text.Trim(),
+                    SoDienThoai = txtSDT_Them.Text.Trim()
                 };
                 khachHangService.InsertKhachHang(khachHang);
                 Close();

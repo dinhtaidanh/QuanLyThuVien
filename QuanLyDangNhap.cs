@@ -17,7 +17,7 @@ namespace ManHinhChinh
             nhanVienService = new NhanVienService();
             try
             {
-                NhanVien nhanVien = nhanVienService.GetNhanVienByUser(txtTen.Text, txtMatKhau.Text);
+                NhanVien nhanVien = nhanVienService.GetNhanVienByUser(txtTen.Text.Trim(), txtMatKhau.Text.Trim());
                 if(nhanVien!= null)
                 {
                     ManHinhChinh manHinhChinh = new ManHinhChinh();

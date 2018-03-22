@@ -19,11 +19,11 @@ namespace ManHinhChinh
         private void btnThemSach_ThemSach_Click(object sender, EventArgs e)
         {
             Sach sach = new Sach();
-            sach.TenSach = txtTenSach_ThemSach.Text;
-            sach.TheLoai = txtTheLoai_ThemSach.Text;
-            sach.TacGia = txtTacGia_ThemSach.Text;
-            sach.NhaXuanBan = txtNXB_ThemSach.Text;
-            sach.SoLuong = txtSoLuong_ThemSach.Text;
+            sach.TenSach = txtTenSach_ThemSach.Text.Trim();
+            sach.TheLoai = txtTheLoai_ThemSach.Text.Trim();
+            sach.TacGia = txtTacGia_ThemSach.Text.Trim();
+            sach.NhaXuanBan = txtNXB_ThemSach.Text.Trim();
+            sach.SoLuong = txtSoLuong_ThemSach.Text.Trim();
             SachService s = new SachService();
             try
             {

@@ -42,6 +42,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnKetThuc = new System.Windows.Forms.Button();
             this.btnChoMuon = new System.Windows.Forms.Button();
@@ -106,7 +107,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabmuon.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -155,7 +155,7 @@
             // 
             this.groupBox7.Controls.Add(this.txtMaKhachHang);
             this.groupBox7.Controls.Add(this.btnTimMaKhachHang);
-            this.groupBox7.Location = new System.Drawing.Point(401, 6);
+            this.groupBox7.Location = new System.Drawing.Point(401, 18);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(316, 100);
             this.groupBox7.TabIndex = 9;
@@ -253,6 +253,12 @@
             // 
             this.columnHeader4.Text = "Ngày thuê";
             this.columnHeader4.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.DisplayIndex = 5;
+            this.columnHeader8.Text = "Ngày hẹn trả";
+            this.columnHeader8.Width = 120;
             // 
             // columnHeader12
             // 
@@ -881,12 +887,6 @@
             // 
             this.columnHeader5.Text = "Ngày trả";
             this.columnHeader5.Width = 120;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.DisplayIndex = 5;
-            this.columnHeader8.Text = "Ngày hẹn trả";
-            this.columnHeader8.Width = 120;
             // 
             // QuanLyThueSach
             // 

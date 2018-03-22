@@ -67,11 +67,11 @@ namespace ManHinhChinh
         {
             try
             {              
-                kh.Ho = txtHo_Sua.Text;
-                kh.Ten = txtTen_Sua.Text;
-                kh.Email = txtEmail_Sua.Text;
-                kh.DiaChi = txtDiaChi_Sua.Text ;
-                kh.SoDienThoai = txtSDT_Sua.Text;
+                kh.Ho = txtHo_Sua.Text.Trim();
+                kh.Ten = txtTen_Sua.Text.Trim();
+                kh.Email = txtEmail_Sua.Text.Trim();
+                kh.DiaChi = txtDiaChi_Sua.Text.Trim();
+                kh.SoDienThoai = txtSDT_Sua.Text.Trim();
                 khs.UpdateKhachHang(kh);
                 MessageBox.Show("Sửa thành công!");
                 this.Close();

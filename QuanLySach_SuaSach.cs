@@ -65,11 +65,11 @@ namespace ManHinhChinh
         private void btnSuaSach_SuaSach_Click(object sender, EventArgs e)
         {      
             SachService s = new SachService();
-            sach.TenSach = txtTenSach_SuaSach.Text;
-            sach.TheLoai = txtTheLoai_SuaSach.Text;
-            sach.TacGia = txtTacGia_SuaSach.Text;
-            sach.NhaXuanBan = txtNXB_SuaSach.Text;
-            sach.SoLuong = txtSoLuong_SuaSach.Text;
+            sach.TenSach = txtTenSach_SuaSach.Text.Trim();
+            sach.TheLoai = txtTheLoai_SuaSach.Text.Trim();
+            sach.TacGia = txtTacGia_SuaSach.Text.Trim();
+            sach.NhaXuanBan = txtNXB_SuaSach.Text.Trim();
+            sach.SoLuong = txtSoLuong_SuaSach.Text.Trim();
             try
             {
                 s.UpdateSach(sach);
