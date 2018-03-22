@@ -92,9 +92,9 @@
             this.groupBox1.Controls.Add(this.txtNXB_SuaSach);
             this.groupBox1.Controls.Add(this.txtSoLuong_SuaSach);
             this.groupBox1.Location = new System.Drawing.Point(11, 36);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(269, 250);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
@@ -105,7 +105,7 @@
             this.btnNull_SoLuong_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNull_SoLuong_SuaSach.ForeColor = System.Drawing.Color.Red;
             this.btnNull_SoLuong_SuaSach.Location = new System.Drawing.Point(243, 202);
-            this.btnNull_SoLuong_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNull_SoLuong_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnNull_SoLuong_SuaSach.Name = "btnNull_SoLuong_SuaSach";
             this.btnNull_SoLuong_SuaSach.Size = new System.Drawing.Size(16, 19);
             this.btnNull_SoLuong_SuaSach.TabIndex = 29;
@@ -118,7 +118,7 @@
             this.btnNull_NXB_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNull_NXB_SuaSach.ForeColor = System.Drawing.Color.Red;
             this.btnNull_NXB_SuaSach.Location = new System.Drawing.Point(243, 158);
-            this.btnNull_NXB_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNull_NXB_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnNull_NXB_SuaSach.Name = "btnNull_NXB_SuaSach";
             this.btnNull_NXB_SuaSach.Size = new System.Drawing.Size(16, 19);
             this.btnNull_NXB_SuaSach.TabIndex = 29;
@@ -131,7 +131,7 @@
             this.btnNull_TacGia_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNull_TacGia_SuaSach.ForeColor = System.Drawing.Color.Red;
             this.btnNull_TacGia_SuaSach.Location = new System.Drawing.Point(243, 114);
-            this.btnNull_TacGia_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNull_TacGia_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnNull_TacGia_SuaSach.Name = "btnNull_TacGia_SuaSach";
             this.btnNull_TacGia_SuaSach.Size = new System.Drawing.Size(16, 19);
             this.btnNull_TacGia_SuaSach.TabIndex = 29;
@@ -144,7 +144,7 @@
             this.btnNull_TheLoai_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNull_TheLoai_SuaSach.ForeColor = System.Drawing.Color.Red;
             this.btnNull_TheLoai_SuaSach.Location = new System.Drawing.Point(243, 70);
-            this.btnNull_TheLoai_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNull_TheLoai_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnNull_TheLoai_SuaSach.Name = "btnNull_TheLoai_SuaSach";
             this.btnNull_TheLoai_SuaSach.Size = new System.Drawing.Size(16, 19);
             this.btnNull_TheLoai_SuaSach.TabIndex = 29;
@@ -157,7 +157,7 @@
             this.btnNull_TenSach_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNull_TenSach_SuaSach.ForeColor = System.Drawing.Color.Red;
             this.btnNull_TenSach_SuaSach.Location = new System.Drawing.Point(243, 26);
-            this.btnNull_TenSach_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNull_TenSach_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnNull_TenSach_SuaSach.Name = "btnNull_TenSach_SuaSach";
             this.btnNull_TenSach_SuaSach.Size = new System.Drawing.Size(16, 19);
             this.btnNull_TenSach_SuaSach.TabIndex = 29;
@@ -168,7 +168,7 @@
             // txtTenSach_SuaSach
             // 
             this.txtTenSach_SuaSach.Location = new System.Drawing.Point(92, 17);
-            this.txtTenSach_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenSach_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSach_SuaSach.Multiline = true;
             this.txtTenSach_SuaSach.Name = "txtTenSach_SuaSach";
             this.txtTenSach_SuaSach.Size = new System.Drawing.Size(150, 28);
@@ -188,7 +188,7 @@
             // txtTheLoai_SuaSach
             // 
             this.txtTheLoai_SuaSach.Location = new System.Drawing.Point(92, 61);
-            this.txtTheLoai_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTheLoai_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtTheLoai_SuaSach.Multiline = true;
             this.txtTheLoai_SuaSach.Name = "txtTheLoai_SuaSach";
             this.txtTheLoai_SuaSach.Size = new System.Drawing.Size(150, 28);
@@ -208,7 +208,7 @@
             // txtTacGia_SuaSach
             // 
             this.txtTacGia_SuaSach.Location = new System.Drawing.Point(92, 105);
-            this.txtTacGia_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTacGia_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtTacGia_SuaSach.Multiline = true;
             this.txtTacGia_SuaSach.Name = "txtTacGia_SuaSach";
             this.txtTacGia_SuaSach.Size = new System.Drawing.Size(150, 28);
@@ -228,7 +228,7 @@
             // txtNXB_SuaSach
             // 
             this.txtNXB_SuaSach.Location = new System.Drawing.Point(92, 149);
-            this.txtNXB_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNXB_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtNXB_SuaSach.Multiline = true;
             this.txtNXB_SuaSach.Name = "txtNXB_SuaSach";
             this.txtNXB_SuaSach.Size = new System.Drawing.Size(150, 28);
@@ -237,17 +237,18 @@
             // txtSoLuong_SuaSach
             // 
             this.txtSoLuong_SuaSach.Location = new System.Drawing.Point(92, 193);
-            this.txtSoLuong_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuong_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong_SuaSach.Multiline = true;
             this.txtSoLuong_SuaSach.Name = "txtSoLuong_SuaSach";
             this.txtSoLuong_SuaSach.Size = new System.Drawing.Size(150, 28);
             this.txtSoLuong_SuaSach.TabIndex = 19;
+            this.txtSoLuong_SuaSach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_SuaSach_KeyPress);
             // 
             // btnXoaSach_XoaSach
             // 
             this.btnXoaSach_XoaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaSach_XoaSach.Location = new System.Drawing.Point(46, 107);
-            this.btnXoaSach_XoaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaSach_XoaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaSach_XoaSach.Name = "btnXoaSach_XoaSach";
             this.btnXoaSach_XoaSach.Size = new System.Drawing.Size(61, 42);
             this.btnXoaSach_XoaSach.TabIndex = 0;
@@ -258,7 +259,7 @@
             // 
             this.btnSuaSach_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaSach_SuaSach.Location = new System.Drawing.Point(46, 33);
-            this.btnSuaSach_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaSach_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaSach_SuaSach.Name = "btnSuaSach_SuaSach";
             this.btnSuaSach_SuaSach.Size = new System.Drawing.Size(61, 42);
             this.btnSuaSach_SuaSach.TabIndex = 0;
@@ -271,9 +272,9 @@
             this.groupBox2.Controls.Add(this.btnXoaSach_XoaSach);
             this.groupBox2.Controls.Add(this.btnSuaSach_SuaSach);
             this.groupBox2.Location = new System.Drawing.Point(357, 58);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(154, 228);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
@@ -284,7 +285,7 @@
             this.btnNull_TatCa_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNull_TatCa_SuaSach.ForeColor = System.Drawing.Color.Red;
             this.btnNull_TatCa_SuaSach.Location = new System.Drawing.Point(310, 165);
-            this.btnNull_TatCa_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNull_TatCa_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnNull_TatCa_SuaSach.Name = "btnNull_TatCa_SuaSach";
             this.btnNull_TatCa_SuaSach.Size = new System.Drawing.Size(28, 27);
             this.btnNull_TatCa_SuaSach.TabIndex = 28;
@@ -300,7 +301,7 @@
             this.Controls.Add(this.btnNull_TatCa_SuaSach);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLySach_SuaSach";
             this.Text = "QuanLySach_SuaSach";
             this.groupBox1.ResumeLayout(false);

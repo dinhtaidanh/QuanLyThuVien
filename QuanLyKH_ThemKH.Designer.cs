@@ -134,6 +134,7 @@
             this.txtSDT_Them.Name = "txtSDT_Them";
             this.txtSDT_Them.Size = new System.Drawing.Size(150, 28);
             this.txtSDT_Them.TabIndex = 19;
+            this.txtSDT_Them.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_Them_KeyPress);
             // 
             // label7
             // 
@@ -185,7 +186,6 @@
             this.btnXoaKH_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaKH_Them.Location = new System.Drawing.Point(46, 107);
             this.btnXoaKH_Them.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaKH_Them.Name = "btnXoaKH_Them";
             this.btnXoaKH_Them.Name = "btnXoaKH_Them";
             this.btnXoaKH_Them.Size = new System.Drawing.Size(61, 42);
             this.btnXoaKH_Them.TabIndex = 0;

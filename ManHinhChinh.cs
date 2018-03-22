@@ -17,6 +17,7 @@ namespace ManHinhChinh
         public ManHinhChinh()
         {
             InitializeComponent();
+          
         }
 
         private void btnQuanLiKH_Click(object sender, EventArgs e)
@@ -35,13 +36,7 @@ namespace ManHinhChinh
         {
             QuanLyThueSach f = new QuanLyThueSach();
             f.ShowDialog();
-        }
-
-        private void btnTimKiemSach_Click(object sender, EventArgs e)
-        {
-            TraCuuSach f = new TraCuuSach();
-            f.ShowDialog();
-        }
+        }       
 
         private void btnThoat_Click(object sender, EventArgs e)
         {

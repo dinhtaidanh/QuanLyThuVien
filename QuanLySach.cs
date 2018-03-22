@@ -55,6 +55,7 @@ namespace ManHinhChinh
 
         private void btnTimKiemSach_Click(object sender, EventArgs e)
         {
+            lvwDanhSach_Sach.Items.Clear();
             try
             {
 

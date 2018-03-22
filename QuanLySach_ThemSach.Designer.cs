@@ -202,6 +202,7 @@
             this.txtSoLuong_ThemSach.Name = "txtSoLuong_ThemSach";
             this.txtSoLuong_ThemSach.Size = new System.Drawing.Size(150, 28);
             this.txtSoLuong_ThemSach.TabIndex = 19;
+            this.txtSoLuong_ThemSach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_ThemSach_KeyPress);
             // 
             // QuanLySach_ThemSach
             // 

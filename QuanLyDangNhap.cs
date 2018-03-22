@@ -22,7 +22,7 @@ namespace ManHinhChinh
                 {
                     ManHinhChinh manHinhChinh = new ManHinhChinh();
                     manHinhChinh.Show();
-                    //Close();
+                    Hide();
                 }           
             }
             catch (Exception)

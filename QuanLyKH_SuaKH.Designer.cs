@@ -278,6 +278,7 @@
             this.txtSDT_Sua.Name = "txtSDT_Sua";
             this.txtSDT_Sua.Size = new System.Drawing.Size(150, 28);
             this.txtSDT_Sua.TabIndex = 19;
+            this.txtSDT_Sua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_Sua_KeyPress);
             // 
             // btnNull_TatCa_SuaKH
             // 

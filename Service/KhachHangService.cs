@@ -32,7 +32,12 @@ namespace ManHinhChinh.Service
 
         public KhachHang GetKhachHangById(int makhachhang)
         {
-            return qLTV.KhachHangs.FirstOrDefault(x => x.MaKhachHang == makhachhang);
+            var k = qLTV.KhachHangs.FirstOrDefault(x => x.MaKhachHang == makhachhang);
+            if (k != null)
+            {
+                return k;
+            }
+            return null;
         }
 
         public List<KhachHang> GetKhachHangByName(string tenkhachhang)
